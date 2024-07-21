@@ -100,12 +100,13 @@ def create_grouped_bar_plot(df, x_col, y_col, hue_col, outputdir, config):
         rects = ax.bar(x + offset, hue_data['mean'], width, label=hue_val)
         ax.errorbar(x + offset, hue_data['mean'], yerr=hue_data['sem'], fmt='none', c='black', capsize=5, elinewidth=1)
 
-    ax.set_ylabel(y_col, fontsize=12)
-    ax.set_xlabel(x_col, fontsize=12)
-    ax.set_title(config["title"], fontsize=16)
+    ax.set_ylabel(y_col, fontsize=16)  # Increased fontsize
+    ax.set_xlabel(x_col, fontsize=16)  # Increased fontsize
+    ax.set_title(config["title"], fontsize=20)  # Increased fontsize
     ax.set_xticks(x)
-    ax.set_xticklabels(all_x, rotation=45, ha='right', fontsize=10)
-    ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=10)
+    ax.set_xticklabels(all_x, rotation=45, ha='right', fontsize=14)  # Increased fontsize
+    ax.tick_params(axis='y', labelsize=14)  # Increased y-axis tick label size
+    ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14, title_fontsize=16)  # Increased fontsize
 
     if 'Memory' in y_col or 'Runtime' in y_col:
         ax.yaxis.set_major_formatter(FuncFormatter(format_y_axis))
@@ -127,12 +128,13 @@ def create_grouped_bar_plot(df, x_col, y_col, hue_col, outputdir, config):
             rects = ax.bar(x + offset, hue_data['mean'], width, label=hue_val)
             ax.errorbar(x + offset, hue_data['mean'], yerr=hue_data['sem'], fmt='none', c='black', capsize=5, elinewidth=1)
 
-        ax.set_ylabel(y_col, fontsize=12)
-        ax.set_xlabel(x_col, fontsize=12)
-        ax.set_title(f"{config['title']} (Log Scale)", fontsize=16)
+        ax.set_ylabel(y_col, fontsize=16)  # Increased fontsize
+        ax.set_xlabel(x_col, fontsize=16)  # Increased fontsize
+        ax.set_title(f"{config['title']} (Log Scale)", fontsize=20)  # Increased fontsize
         ax.set_xticks(x)
-        ax.set_xticklabels(all_x, rotation=45, ha='right', fontsize=10)
-        ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=10)
+        ax.set_xticklabels(all_x, rotation=45, ha='right', fontsize=14)  # Increased fontsize
+        ax.tick_params(axis='y', labelsize=14)  # Increased y-axis tick label size
+        ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14, title_fontsize=16)  # Increased fontsize
 
         if 'Memory' in y_col or 'Runtime' in y_col:
             ax.yaxis.set_major_formatter(FuncFormatter(format_y_axis))
