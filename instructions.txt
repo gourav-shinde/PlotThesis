@@ -1,0 +1,3 @@
+sudo apt-get install texlive-full
+
+to install latex
