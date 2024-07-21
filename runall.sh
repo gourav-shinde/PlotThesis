@@ -26,3 +26,5 @@ for dir in $dir_pat; do
         echo "------------------------"
     fi
 done
+
+python generateLatex.py $1
