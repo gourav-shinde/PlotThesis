@@ -29,4 +29,6 @@ done
 
 python customHistograms.py $1
 
+sleep 5
+
 python generateLatex.py $1

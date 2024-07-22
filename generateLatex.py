@@ -92,8 +92,9 @@ def main():
         original_dir = os.getcwd()
         os.chdir(root_dir)
         
-        subprocess.run(['pdflatex', 'png_collection.tex'], check=True)
-        print(f"PDF file created: {pdf_file}")
+        for _ in range(2):
+            subprocess.run(['pdflatex', 'png_collection.tex'], check=True)
+            print(f"PDF file created: {pdf_file}")
         
         # Change back to the original directory
         os.chdir(original_dir)
