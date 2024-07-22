@@ -27,4 +27,6 @@ for dir in $dir_pat; do
     fi
 done
 
+python customHistograms.py $1
+
 python generateLatex.py $1
