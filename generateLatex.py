@@ -30,10 +30,11 @@ def create_latex_content(root_dir):
         r'\usepackage[margin=1in]{geometry}',
         r'\usepackage{float}',
         r'\usepackage{hyperref}',
+        r'\usepackage{svg}',
         r'\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}',
         r'\setlength{\parskip}{1em}',
         r'\begin{document}',
-        r'\title{\Large PNG Images Collection}',
+        r'\title{\Large SVG Images Collection}',
         r'\author{Generated Script}',
         r'\date{\today}',
         r'\maketitle',
@@ -42,8 +43,8 @@ def create_latex_content(root_dir):
     ]
 
     for root, dirs, files in os.walk(root_dir):
-        png_files = [f for f in files if f.lower().endswith('.png')]
-        if png_files:
+        svg_files = [f for f in files if f.lower().endswith('.svg')]
+        if svg_files:
             rel_path = os.path.relpath(root, root_dir)
             if rel_path != '.':
                 clean_title = remove_timestamp(rel_path)
@@ -53,16 +54,17 @@ def create_latex_content(root_dir):
                     f'\n\\section{{{section_title}}}'
                 ])
 
-            for i, png_file in enumerate(png_files):
+            for i, svg_file in enumerate(svg_files):
                 if i > 0 and i % 2 == 0:
                     content.append(r'\newpage')
                 
-                img_path = os.path.join(rel_path, png_file).replace('\\', '/')
+                img_path = os.path.join(rel_path, svg_file).replace('\\', '/')
+                caption = latex_escape(svg_file[:-4])  # Remove '.svg' from the caption
                 content.extend([
                     r'\begin{figure}[H]',
                     r'\centering',
-                    f'\\includegraphics[width=0.9\\textwidth, height=0.4\\textheight, keepaspectratio]{{{img_path}}}',
-                    f'\\caption{{{latex_escape(png_file)}}}',
+                    f'\\includesvg[width=0.9\\textwidth, height=0.4\\textheight, keepaspectratio]{{{img_path}}}',
+                    f'\\caption{{{caption}}}',
                     r'\end{figure}',
                     r'\vspace{1cm}'
                 ])
@@ -70,15 +72,14 @@ def create_latex_content(root_dir):
     content.append(r'\end{document}')
     return '\n'.join(content)
 
-
 def main():
-    parser = argparse.ArgumentParser(description='Create a LaTeX and PDF document from PNG files in a directory structure.')
-    parser.add_argument('root_dir', help='Root directory to start searching for PNG files')
+    parser = argparse.ArgumentParser(description='Create a LaTeX and PDF document from SVG files in a directory structure.')
+    parser.add_argument('root_dir', help='Root directory to start searching for SVG files')
     args = parser.parse_args()
 
     root_dir = os.path.abspath(args.root_dir)
-    latex_file = os.path.join(root_dir, 'png_collection.tex')
-    pdf_file = os.path.join(root_dir, 'png_collection.pdf')
+    latex_file = os.path.join(root_dir, 'svg_collection.tex')
+    pdf_file = os.path.join(root_dir, 'svg_collection.pdf')
 
     latex_content = create_latex_content(root_dir)
 
@@ -93,7 +94,7 @@ def main():
         os.chdir(root_dir)
         
         for _ in range(2):
-            subprocess.run(['pdflatex', 'png_collection.tex'], check=True)
+            subprocess.run(['pdflatex', '-shell-escape', 'svg_collection.tex'], check=True)
             print(f"PDF file created: {pdf_file}")
         
         # Change back to the original directory

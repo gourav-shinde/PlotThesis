@@ -101,7 +101,7 @@ def create_unified_plot(dataframes, config, output_dir):
     plt.grid(True, linestyle='--', alpha=0.7)
     plt.tight_layout()
     
-    filename = f"Unified_{config['title'].replace(' ', '_')}.png"
+    filename = f"Unified_{config['title'].replace(' ', '_')}.svg"
     plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
     plt.close()
 

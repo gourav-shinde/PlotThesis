@@ -33,7 +33,7 @@ configs = [
 
 
 def create_output_directory(root_dir):
-    output_dir = os.path.join(root_dir, "generated_plots")
+    output_dir = os.path.join(root_dir, "Top Performers")
     os.makedirs(output_dir, exist_ok=True)
     return output_dir
 
@@ -131,7 +131,7 @@ def plot_hist(data, config, output_dir, title_suffix=""):
         plt.text(i, v, f'{v:.2f}', ha='center', va='bottom')
 
     plt.tight_layout()
-    filename = f"{config['title']}{title_suffix.replace(' ', '_')}.png"
+    filename = f"{config['title']}{title_suffix.replace(' ', '_')}.svg"
     filepath = os.path.join(output_dir, filename)
     plt.savefig(filepath, bbox_inches='tight')
     plt.close()

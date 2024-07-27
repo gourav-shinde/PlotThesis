@@ -66,7 +66,6 @@ def plothandler(dataframe, config, outputdir):
         print("doesnt support RN")
     else:
         print("Invalid graph type")
-    
 
 def create_grouped_bar_plot(df, x_col, y_col, hue_col, outputdir, config):
     df[y_col] = df[y_col].astype('float64')
@@ -87,62 +86,85 @@ def create_grouped_bar_plot(df, x_col, y_col, hue_col, outputdir, config):
 
     print(f"Data for {config['title']} has been written to {txt_filename}")
 
+    # Create original plot
+    create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, False)
+
+    # Create normalized plot
+    create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, True)
+
+def create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, normalize):
     plt.figure(figsize=(20, 10))
     
     ax = plt.gca()
+    all_x = df_complete[x_col].unique()
+    all_hue = df_complete[hue_col].unique()
     n_hues = len(all_hue)
-    width = 0.8 / n_hues  # Adjust bar width based on number of hues
-    x = np.arange(len(all_x))  # X-axis positions for groups
+    width = 0.8 / n_hues
+    x = np.arange(len(all_x))
     
+    for i, hue_val in enumerate(all_hue):
+        hue_data = df_complete[df_complete[hue_col] == hue_val]
+        if normalize:
+            max_val = hue_data['mean'].max()
+            hue_data['mean'] = hue_data['mean'] / max_val
+            hue_data['sem'] = hue_data['sem'] / max_val
+        
+        offset = width * (i - (n_hues - 1) / 2)
+        rects = ax.bar(x + offset, hue_data['mean'], width, label=hue_val)
+        ax.errorbar(x + offset, hue_data['mean'], yerr=hue_data['sem'], fmt='none', c='black', capsize=5, elinewidth=1)
+
+    ax.set_ylabel(f"Normalized {y_col}" if normalize else y_col, fontsize=16)
+    ax.set_xlabel(x_col, fontsize=16)
+    ax.set_title(f"{config['title']} (Normalized)" if normalize else config["title"], fontsize=20)
+    ax.set_xticks(x)
+    ax.set_xticklabels(all_x, rotation=45, ha='right', fontsize=14)
+    ax.tick_params(axis='y', labelsize=14)
+    ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14, title_fontsize=16)
+
+    if not normalize and ('Memory' in y_col or 'Runtime' in y_col):
+        ax.yaxis.set_major_formatter(FuncFormatter(format_y_axis))
+
+    plt.tight_layout()
+    plt.savefig(os.path.join(outputdir, f"{config['title']}_normalized.svg" if normalize else f"{config['title']}.svg"), dpi=300, bbox_inches='tight')
+    plt.close()
+
+    # Create log scale plot if needed (only for non-normalized data)
+    if not normalize:
+        y_min, y_max = df_complete['mean'].min(), df_complete['mean'].max()
+        if y_min > 0 and y_max / y_min > 1000:
+            create_log_plot(df_complete, x_col, y_col, hue_col, outputdir, config)
+
+def create_log_plot(df_complete, x_col, y_col, hue_col, outputdir, config):
+    plt.figure(figsize=(20, 10))
+    ax = plt.gca()
+    ax.set_yscale('log')
+
+    all_x = df_complete[x_col].unique()
+    all_hue = df_complete[hue_col].unique()
+    n_hues = len(all_hue)
+    width = 0.8 / n_hues
+    x = np.arange(len(all_x))
+
     for i, hue_val in enumerate(all_hue):
         hue_data = df_complete[df_complete[hue_col] == hue_val]
         offset = width * (i - (n_hues - 1) / 2)
         rects = ax.bar(x + offset, hue_data['mean'], width, label=hue_val)
         ax.errorbar(x + offset, hue_data['mean'], yerr=hue_data['sem'], fmt='none', c='black', capsize=5, elinewidth=1)
 
-    ax.set_ylabel(y_col, fontsize=16)  # Increased fontsize
-    ax.set_xlabel(x_col, fontsize=16)  # Increased fontsize
-    ax.set_title(config["title"], fontsize=20)  # Increased fontsize
+    ax.set_ylabel(y_col, fontsize=16)
+    ax.set_xlabel(x_col, fontsize=16)
+    ax.set_title(f"{config['title']} (Log Scale)", fontsize=20)
     ax.set_xticks(x)
-    ax.set_xticklabels(all_x, rotation=45, ha='right', fontsize=14)  # Increased fontsize
-    ax.tick_params(axis='y', labelsize=14)  # Increased y-axis tick label size
-    ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14, title_fontsize=16)  # Increased fontsize
+    ax.set_xticklabels(all_x, rotation=45, ha='right', fontsize=14)
+    ax.tick_params(axis='y', labelsize=14)
+    ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14, title_fontsize=16)
 
     if 'Memory' in y_col or 'Runtime' in y_col:
         ax.yaxis.set_major_formatter(FuncFormatter(format_y_axis))
 
     plt.tight_layout()
-    plt.savefig(os.path.join(outputdir, f"{config['title']}.png"), dpi=300, bbox_inches='tight')
+    plt.savefig(os.path.join(outputdir, f"{config['title']}_log.svg"), dpi=300, bbox_inches='tight')
     plt.close()
-
-    # Create a separate plot with log scale if needed
-    y_min, y_max = df_complete['mean'].min(), df_complete['mean'].max()
-    if y_min > 0 and y_max / y_min > 1000:
-        plt.figure(figsize=(20, 10))
-        ax = plt.gca()
-        ax.set_yscale('log')
-
-        for i, hue_val in enumerate(all_hue):
-            hue_data = df_complete[df_complete[hue_col] == hue_val]
-            offset = width * (i - (n_hues - 1) / 2)
-            rects = ax.bar(x + offset, hue_data['mean'], width, label=hue_val)
-            ax.errorbar(x + offset, hue_data['mean'], yerr=hue_data['sem'], fmt='none', c='black', capsize=5, elinewidth=1)
-
-        ax.set_ylabel(y_col, fontsize=16)  # Increased fontsize
-        ax.set_xlabel(x_col, fontsize=16)  # Increased fontsize
-        ax.set_title(f"{config['title']} (Log Scale)", fontsize=20)  # Increased fontsize
-        ax.set_xticks(x)
-        ax.set_xticklabels(all_x, rotation=45, ha='right', fontsize=14)  # Increased fontsize
-        ax.tick_params(axis='y', labelsize=14)  # Increased y-axis tick label size
-        ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14, title_fontsize=16)  # Increased fontsize
-
-        if 'Memory' in y_col or 'Runtime' in y_col:
-            ax.yaxis.set_major_formatter(FuncFormatter(format_y_axis))
-
-        plt.tight_layout()
-        plt.savefig(os.path.join(outputdir, f"{config['title']}_log.png"), dpi=300, bbox_inches='tight')
-        plt.close()
-
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Generate unified plots from multiple CSV files")
@@ -160,8 +182,6 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
     dataframes = pd.DataFrame()
     for input_dir in glob.glob(args.input_pattern):
-        # print("######################")
-        # print(input_dir)
         if os.path.isdir(input_dir):
             folder_name = os.path.basename(input_dir)
             csv_file = next((f for f in os.listdir(input_dir) if f.endswith('.csv')), None)
@@ -172,8 +192,7 @@ def main():
                     df[col] = df[col].astype('float64')
                 df['Folder'] = folder_name  # Add a column to identify the folder
                 dataframes = pd.concat([dataframes, df], ignore_index=True)
-        # print all column names
-    # print(f"Columns in combined DataFrame: {dataframes.columns.tolist()}")
+
     for config in plot_configs:
         plothandler(dataframes, config, output_dir)
     
