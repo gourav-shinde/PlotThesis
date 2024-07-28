@@ -106,8 +106,8 @@ def create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, normalize
         hue_data = df_complete[df_complete[hue_col] == hue_val]
         if normalize:
             max_val = hue_data['mean'].max()
-            hue_data['mean'] = hue_data['mean'] / max_val
-            hue_data['sem'] = hue_data['sem'] / max_val
+            hue_data.loc[:, 'mean'] = hue_data['mean'] / max_val
+            hue_data.loc[:, 'sem'] = hue_data['sem'] / max_val
         
         offset = width * (i - (n_hues - 1) / 2)
         rects = ax.bar(x + offset, hue_data['mean'], width, label=hue_val)

@@ -4,6 +4,7 @@ import subprocess
 import argparse
 import re
 import hashlib
+import errno
 
 def latex_escape(text):
     special_chars = {
@@ -77,7 +78,16 @@ def create_latex_content(root_dir):
             unique_img_path = os.path.join(rel_path, unique_svg_file).replace('\\', '/')
             
             # Create a symbolic link with the unique name
-            os.symlink(os.path.join(root_dir, original_img_path), os.path.join(root_dir, unique_img_path))
+            try:
+                os.symlink(os.path.join(root_dir, original_img_path), os.path.join(root_dir, unique_img_path))
+            except OSError as e:
+                if e.errno == errno.EEXIST:
+                    # If the symlink already exists, remove it and create a new one
+                    os.remove(os.path.join(root_dir, unique_img_path))
+                    os.symlink(os.path.join(root_dir, original_img_path), os.path.join(root_dir, unique_img_path))
+                else:
+                    # If it's a different error, raise it
+                    raise
             
             caption = latex_escape(svg_file[:-4])  # Remove '.svg' from the caption
             content.extend([
