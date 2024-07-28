@@ -29,7 +29,7 @@ plot_configs = [
         "groupby": "Folder",
         "x": "branch",
         "y": "Simulation_Runtime_(secs.)",
-        "title": "Branch vs Simulation Time vs Branch",
+        "title": "Branch vs Simulation Time",
         "type": "bar",
         "agg": "mean"
     },
