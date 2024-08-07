@@ -25,21 +25,27 @@ def remove_timestamp(text):
     return re.sub(r'_\d{14}', '', text)
 
 def create_unique_filename(rel_path, svg_file):
-    # Create a unique hash based on the relative path and file name
     unique_id = hashlib.md5(f"{rel_path}_{svg_file}".encode()).hexdigest()[:8]
     return f"{unique_id}_{svg_file}"
 
 def create_latex_content(root_dir):
     content = [
-        r'\documentclass[12pt]{article}',
+        r'\documentclass[11pt]{book}',
+        r'\usepackage{fullpage}',
         r'\usepackage{graphicx}',
+        r'\usepackage{tabularx}',
         r'\usepackage[space]{grffile}',
         r'\usepackage[margin=1in]{geometry}',
         r'\usepackage{float}',
+        r'\usepackage{fancyhdr}',
         r'\usepackage{hyperref}',
         r'\usepackage{svg}',
         r'\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}',
         r'\setlength{\parskip}{1em}',
+        r'\pagestyle{fancy}',
+        r'\setlength{\headsep}{25pt}',
+        r'\setlength{\headheight}{14pt}',
+        r'\renewcommand{\headrulewidth}{0.4pt}',
         r'\begin{document}',
         r'\title{\Large SVG Images Collection}',
         r'\author{Generated Script}',
@@ -47,9 +53,17 @@ def create_latex_content(root_dir):
         r'\maketitle',
         r'\tableofcontents',
         r'\newpage',
+        r'\section{Label Definitions}',
     ]
+    # the Info center
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    paste_file = os.path.join(script_dir, 'BranchDefinitions.txt')
+    with open(paste_file, 'r') as f:
+        paste_content = f.read()
+    content.append(paste_content)
 
-    # Collect all directories with SVG files
+    content.append(r'\newpage')
+    
     svg_dirs = []
     for root, dirs, files in os.walk(root_dir):
         svg_files = [f for f in files if f.lower().endswith('.svg')]
@@ -57,7 +71,6 @@ def create_latex_content(root_dir):
             rel_path = os.path.relpath(root, root_dir)
             svg_dirs.append((rel_path, svg_files))
 
-    # Sort directories alphabetically
     svg_dirs.sort(key=lambda x: x[0].lower())
 
     for rel_path, svg_files in svg_dirs:
@@ -66,8 +79,10 @@ def create_latex_content(root_dir):
             section_title = latex_escape(clean_title.replace(os.sep, ' - '))
             content.extend([
                 r'\newpage',
-                f'\n\\section{{{section_title}}}'
+                f'\n\\section{{{section_title}}}',
             ])
+        else:
+            content.append(r'\fancyhead[C]{SVG Images Collection}')
 
         for i, svg_file in enumerate(sorted(svg_files)):
             if i > 0 and i % 2 == 0:
@@ -77,19 +92,16 @@ def create_latex_content(root_dir):
             unique_svg_file = create_unique_filename(rel_path, svg_file)
             unique_img_path = os.path.join(rel_path, unique_svg_file).replace('\\', '/')
             
-            # Create a symbolic link with the unique name
             try:
                 os.symlink(os.path.join(root_dir, original_img_path), os.path.join(root_dir, unique_img_path))
             except OSError as e:
                 if e.errno == errno.EEXIST:
-                    # If the symlink already exists, remove it and create a new one
                     os.remove(os.path.join(root_dir, unique_img_path))
                     os.symlink(os.path.join(root_dir, original_img_path), os.path.join(root_dir, unique_img_path))
                 else:
-                    # If it's a different error, raise it
                     raise
             
-            caption = latex_escape(svg_file[:-4])  # Remove '.svg' from the caption
+            caption = latex_escape(svg_file[:-4])
             content.extend([
                 r'\begin{figure}[H]',
                 r'\centering',
@@ -119,7 +131,6 @@ def main():
     print(f"LaTeX file created: {latex_file}")
 
     try:
-        # Change to the root directory before running pdflatex
         original_dir = os.getcwd()
         os.chdir(root_dir)
         
@@ -127,7 +138,6 @@ def main():
             subprocess.run(['pdflatex', '-shell-escape', 'svg_collection.tex'], check=True)
             print(f"PDF file created: {pdf_file}")
         
-        # Change back to the original directory
         os.chdir(original_dir)
     except subprocess.CalledProcessError:
         print("Error: Unable to create PDF. Make sure pdflatex is installed and in your PATH.")

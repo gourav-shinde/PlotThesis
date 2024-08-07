@@ -105,9 +105,28 @@ def create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, normalize
     for i, hue_val in enumerate(all_hue):
         hue_data = df_complete[df_complete[hue_col] == hue_val]
         if normalize:
+            # Calculate the min and max of the mean values
+            min_val = hue_data['mean'].min()
             max_val = hue_data['mean'].max()
-            hue_data.loc[:, 'mean'] = hue_data['mean'] / max_val
-            hue_data.loc[:, 'sem'] = hue_data['sem'] / max_val
+            
+            if max_val != min_val:  # Avoid division by zero
+                # Normalize both mean and sem
+                hue_data.loc[:, 'mean'] = (hue_data['mean'] - min_val) / (max_val - min_val)
+                hue_data.loc[:, 'sem'] = hue_data['sem'] / (max_val - min_val)
+                
+                # Shift values to ensure all are positive
+                min_with_error = (hue_data['mean'] - hue_data['sem']).min()
+                if min_with_error < 0:
+                    shift = abs(min_with_error)
+                    hue_data.loc[:, 'mean'] += shift
+                
+                # Rescale to [0, 1] range
+                max_shifted = hue_data['mean'].max()
+                hue_data.loc[:, 'mean'] /= max_shifted
+                hue_data.loc[:, 'sem'] /= max_shifted
+            else:
+                hue_data.loc[:, 'mean'] = 0.5  # Set to middle if all values are the same
+                hue_data.loc[:, 'sem'] = 0
         
         offset = width * (i - (n_hues - 1) / 2)
         rects = ax.bar(x + offset, hue_data['mean'], width, label=hue_val)
@@ -121,7 +140,9 @@ def create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, normalize
     ax.tick_params(axis='y', labelsize=14)
     ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14, title_fontsize=16)
 
-    if not normalize and ('Memory' in y_col or 'Runtime' in y_col):
+    if normalize:
+        ax.set_ylim(0, 1.1)  # Set y-axis limits for normalized data, giving some space for error bars
+    elif 'Memory' in y_col or 'Runtime' in y_col:
         ax.yaxis.set_major_formatter(FuncFormatter(format_y_axis))
 
     plt.tight_layout()
