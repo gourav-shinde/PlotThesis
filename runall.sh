@@ -32,3 +32,6 @@ python customHistograms.py $1
 sleep 5
 
 python generateLatex.py $1
+
+rm -rf overleaf/$1
+python migrate_foroverleaf.py $1 overleaf/$1

@@ -1,35 +1,19 @@
-\begin{itemize}
-  \item \textbf{master}: This is the Old master branch (C++20 version). Uses asynchronous GVT.
-  
-  \item \textbf{UnifiedMain}: Uses UnifiedQueue as input queue, synchronous GVT, and relaxed CompareEvent function.
-  
-  \item \textbf{Fossil}: Separate fossil thread (everything else is the same as master).
-  
-  \item \textbf{SIMD}: Uses AVX2 SIMD instructions for compareEvents function.
-  
-  \item \textbf{relaxedCompare}: Uses relaxed CompareEvent function (otherwise everything is the same as master).
-  
-  \item \textbf{HashinPOC}: Hashes the sender\_name and receiver\_name in compareEvents. VTune showed better performance on new system, but performance is not improved on the cluster.
-  
-  \item \textbf{SynGVT}: Uses 3 barrier synchronization, Synchronous GVT.
-\end{itemize}
-
 \begin{table}[h]
 \centering
-\small
-\begin{tabularx}{\textwidth}{|l|X|X|X|X|p{1.5cm}|p{1.5cm}|X|p{2cm}|X|}
+\footnotesize
+\begin{tabularx}{\textwidth}{|l|X|X|X|X|X|X|X|}
 \hline
-\textbf{Model} & \textbf{Grid Size} & \textbf{Max\newline Sim\newline Time} & \textbf{Seq\newline Sim\newline Time} & \textbf{Time-\newline out} & \textbf{Worker\newline Threads} & \textbf{State\newline Save\newline Period} & \textbf{Iter-\newline ations} & \textbf{Schedule\newline Queues} & \textbf{GVT\newline Period} \\
+\textbf{Model} & \textbf{Grid Size} & \textbf{Max Sim Time} & \textbf{Seq Sim Time} & \textbf{Worker Threads} & \textbf{State Save Period} & \textbf{Iter-ations} & \textbf{GVT Period} \\
 \hline
-Epidemic 10k-ba & 10k & 20000 & 8000 & 200 & 3, 6 & 32 & 5 & 1, 2, 3, 6 & 1000 \\
+Epidemic 10k-ba & 10k & 20000 & 8000 & 3, 6 & 32 & 5 & 1000 \\
 \hline
-Epidemic 100k-ba & 100k & 6000 & 200 & 200 & 3, 6 & 32 & 5 & 1, 2, 3, 6 & 1000 \\
+Epidemic 100k-ba & 100k & 6000 & 200 & 3, 6 & 32 & 5 & 1000 \\
 \hline
-PCS 10k & 10k & 500 & 350 & 150 & 3, 6 & 32 & 10 & 1, 2, 3, 6 & 1000 \\
+PCS 10k & 10k & 500 & 350 & 3, 6 & 32 & 5 & 1000 \\
 \hline
-Traffic 10k & 10k & 10000 & 6000 & 150 & 3, 6 & 32 & 5 & 1, 2, 3, 6 & 1000 \\
+Traffic 10k & 10k & 10000 & 6000 & 3, 6 & 32 & 5 & 1000 \\
 \hline
 \end{tabularx}
-\caption{Extended configuration summary for different models}
-\label{table:extended_model_configs}
+\caption{Modified configuration summary for different models}
+\label{table:modified_model_configs}
 \end{table}

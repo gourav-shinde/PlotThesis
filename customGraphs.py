@@ -130,7 +130,8 @@ def create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, normalize
         
         offset = width * (i - (n_hues - 1) / 2)
         rects = ax.bar(x + offset, hue_data['mean'], width, label=hue_val)
-        ax.errorbar(x + offset, hue_data['mean'], yerr=hue_data['sem'], fmt='none', c='black', capsize=5, elinewidth=1)
+        if not normalize:
+            ax.errorbar(x + offset, hue_data['mean'], yerr=hue_data['sem'], fmt='none', c='black', capsize=5, elinewidth=1)
 
     ax.set_ylabel(f"Normalized {y_col}" if normalize else y_col, fontsize=16)
     ax.set_xlabel(x_col, fontsize=16)
