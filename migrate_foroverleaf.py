@@ -1,8 +1,12 @@
 import os
 import shutil
 import argparse
+import re
 
 def copy_files(source_dir, destination_dir):
+    # Compile the regex pattern for matching SVG files with ID
+    svg_pattern = re.compile(r'^[a-zA-Z0-9]+_.*\.svg$', re.IGNORECASE)
+
     for root, dirs, files in os.walk(source_dir):
         # Skip the svg-inkscape folder
         if "svg-inkscape" in dirs:
@@ -13,9 +17,15 @@ def copy_files(source_dir, destination_dir):
         dest_path = os.path.join(destination_dir, relative_path)
         os.makedirs(dest_path, exist_ok=True)
 
-        # Copy SVG, TEX, and PDF files
+        # Copy SVG (with ID), TEX, and PDF files
         for file in files:
-            if file.lower().endswith(('.svg', '.tex', '.pdf')):
+            if file.lower().endswith('.svg'):
+                if svg_pattern.match(file):
+                    source_file = os.path.join(root, file)
+                    dest_file = os.path.join(dest_path, file)
+                    shutil.copy2(source_file, dest_file)
+                    print(f"Copied: {dest_file}")
+            elif file.lower().endswith(('.tex', '.pdf')):
                 source_file = os.path.join(root, file)
                 dest_file = os.path.join(dest_path, file)
                 shutil.copy2(source_file, dest_file)
