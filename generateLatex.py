@@ -109,6 +109,7 @@ def create_standalone_latex(root_dir):
     content = [
         r'\documentclass[11pt]{article}',
         r'\usepackage{fullpage}',
+        r'\usepackage{amsmath}'
         r'\usepackage{graphicx}',
         r'\usepackage{caption}',
         r'\usepackage{subcaption}',
