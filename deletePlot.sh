@@ -13,55 +13,42 @@ if [ ! -d "$1" ]; then
     exit 1
 fi
 
-# Function to delete svg, TXT, tex, pdf, and pdf_tex files and symlinks
+# Function to delete various file types and symlinks
 delete_files() {
     local dir="$1"
-    local svg_count=0
-    local txt_count=0
-    local tex_count=0
-    local pdf_count=0
-    local pdf_tex_count=0
+    declare -A file_counts
+
+    # List of file extensions to delete
+    local extensions=("svg" "txt" "tex" "pdf" "pdf_tex" "toc" "out" "blg" "bbl" "aux")
+    
+    # Initialize counters
+    for ext in "${extensions[@]}"; do
+        file_counts[$ext]=0
+    done
     
     # Function to delete file or symlink and increment counter
     delete_and_count() {
         local file="$1"
-        local counter_name="$2"
+        local ext="$2"
         rm -f "$file"
         echo "Deleted: $file"
-        eval "$counter_name=$((${!counter_name}+1))"
+        ((file_counts[$ext]++))
     }
 
-    # Use find to locate and delete svg files and symlinks
-    while IFS= read -r -d '' file; do
-        delete_and_count "$file" svg_count
-    done < <(find "$dir" \( -type f -o -type l \) -iname "*.svg" -print0)
+    # Use find to locate and delete files and symlinks for each extension
+    for ext in "${extensions[@]}"; do
+        while IFS= read -r -d '' file; do
+            delete_and_count "$file" "$ext"
+        done < <(find "$dir" \( -type f -o -type l \) -iname "*.$ext" -print0)
+    done
 
-    # Use find to locate and delete TXT files and symlinks
-    while IFS= read -r -d '' file; do
-        delete_and_count "$file" txt_count
-    done < <(find "$dir" \( -type f -o -type l \) -iname "*.txt" -print0)
-
-    # Use find to locate and delete tex files and symlinks
-    while IFS= read -r -d '' file; do
-        delete_and_count "$file" tex_count
-    done < <(find "$dir" \( -type f -o -type l \) -iname "*.tex" -print0)
-
-    # Use find to locate and delete pdf files and symlinks
-    while IFS= read -r -d '' file; do
-        delete_and_count "$file" pdf_count
-    done < <(find "$dir" \( -type f -o -type l \) -iname "*.pdf" -print0)
-
-    # Use find to locate and delete pdf_tex files and symlinks
-    while IFS= read -r -d '' file; do
-        delete_and_count "$file" pdf_tex_count
-    done < <(find "$dir" \( -type f -o -type l \) -iname "*.pdf_tex" -print0)
-
-    echo "Total svg files/symlinks deleted: $svg_count"
-    echo "Total TXT files/symlinks deleted: $txt_count"
-    echo "Total tex files/symlinks deleted: $tex_count"
-    echo "Total pdf files/symlinks deleted: $pdf_count"
-    echo "Total pdf_tex files/symlinks deleted: $pdf_tex_count"
-    echo "Total files/symlinks deleted: $((svg_count + txt_count + tex_count + pdf_count + pdf_tex_count))"
+    # Print results
+    local total=0
+    for ext in "${extensions[@]}"; do
+        echo "Total $ext files/symlinks deleted: ${file_counts[$ext]}"
+        ((total += file_counts[$ext]))
+    done
+    echo "Total files/symlinks deleted: $total"
 }
 
 # Call the function with the provided directory

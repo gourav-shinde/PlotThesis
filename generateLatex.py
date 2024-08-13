@@ -5,6 +5,7 @@ import argparse
 import re
 import hashlib
 import errno
+import shutil
 
 def latex_escape(text):
     special_chars = {
@@ -29,34 +30,27 @@ def create_unique_filename(rel_path, svg_file):
     return f"{unique_id}_{svg_file}"
 
 def create_latex_content(root_dir):
-    content = [
-        r'\documentclass[11pt]{book}',
-        r'\usepackage{fullpage}',
-        r'\usepackage{graphicx}',
-        r'\usepackage{tabularx}',
-        r'\usepackage[space]{grffile}',
-        r'\usepackage[margin=1in]{geometry}',
-        r'\usepackage{float}',
-        r'\usepackage{fancyhdr}',
-        r'\usepackage{hyperref}',
-        r'\usepackage{svg}',
-        r'\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}',
-        r'\setlength{\parskip}{1em}',
-        r'\pagestyle{fancy}',
-        r'\setlength{\headsep}{25pt}',
-        r'\setlength{\headheight}{14pt}',
-        r'\renewcommand{\headrulewidth}{0.4pt}',
-        r'\begin{document}',
-        r'\title{\Large SVG Images Collection}',
-        r'\author{Generated Script}',
-        r'\date{\today}',
-        r'\maketitle',
-        r'\tableofcontents',
-        r'\newpage',
-        r'\section{Label Definitions}',
-    ]
-    # the Info center
+    content = []
+    
+    # Add discussion.tex content at the top
     script_dir = os.path.dirname(os.path.abspath(__file__))
+    discussion_file = os.path.join(script_dir, 'discussion.tex')
+    if os.path.exists(discussion_file):
+        with open(discussion_file, 'r', encoding='utf-8') as f:
+            discussion_content = f.read()
+        content.append(discussion_content)
+        content.append(r'\newpage')
+    else:
+        print(f"Error: discussion.tex not found at {discussion_file}")
+        print("The script cannot continue without this file.")
+        sys.exit(1)  # 
+    
+    content.extend([
+        r'\section{Label Definitions}',
+    ])
+    
+    # the Info center
+    
     paste_file = os.path.join(script_dir, 'BranchDefinitions.txt')
     with open(paste_file, 'r') as f:
         paste_content = f.read()
@@ -81,8 +75,6 @@ def create_latex_content(root_dir):
                 r'\newpage',
                 f'\n\\section{{{section_title}}}',
             ])
-        else:
-            content.append(r'\fancyhead[C]{SVG Images Collection}')
 
         for i, svg_file in enumerate(sorted(svg_files)):
             if i > 0 and i % 2 == 0:
@@ -111,7 +103,46 @@ def create_latex_content(root_dir):
                 r'\vspace{1cm}'
             ])
 
-    content.append(r'\end{document}')
+    return '\n'.join(content)
+
+def create_standalone_latex(root_dir):
+    content = [
+        r'\documentclass[11pt]{article}',
+        r'\usepackage{fullpage}',
+        r'\usepackage{graphicx}',
+        r'\usepackage{caption}',
+        r'\usepackage{subcaption}',
+        r'\usepackage{cite}',
+        r'\usepackage{url}',
+        r'\usepackage{fancyhdr}',
+        r'\usepackage{color}',
+        r'\usepackage[section]{placeins}',
+        r'\usepackage{float}',
+        r'\usepackage{tabularx}',
+        r'\usepackage[margin=1in]{geometry}',
+        r'\usepackage{hyperref}',
+        r'\usepackage{svg}',
+        r'\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}',
+        r'\setlength{\parskip}{1em}',
+        r'\pagestyle{fancy}',
+        r'\fancyhf{}', # Clear header and footer
+        r'\renewcommand{\headrulewidth}{0pt}', # Remove header line
+        r'\fancyfoot[C]{\thepage}', # Center page number in footer
+        r'\begin{document}',
+        r'\title{\Large SVG Images Collection}',
+        r'\author{Generated Script}',
+        r'\date{\today}',
+        r'\maketitle',
+        r'\thispagestyle{empty}', # No page number on title page
+        r'\tableofcontents',
+        r'\thispagestyle{empty}', # No page number on table of contents
+        r'\clearpage',
+        r'\pagenumbering{arabic}',
+        r'\input{svg_content.tex}',
+        r'\bibliographystyle{plain}',
+        r'\bibliography{references}',
+        r'\end{document}'
+    ]
     return '\n'.join(content)
 
 def main():
@@ -120,15 +151,30 @@ def main():
     args = parser.parse_args()
 
     root_dir = os.path.abspath(args.root_dir)
-    latex_file = os.path.join(root_dir, 'svg_collection.tex')
+    latex_content_file = os.path.join(root_dir, 'svg_content.tex')
+    standalone_latex_file = os.path.join(root_dir, 'svg_collection.tex')
     pdf_file = os.path.join(root_dir, 'svg_collection.pdf')
 
-    latex_content = create_latex_content(root_dir)
+    # Copy references.bib to the root_dir
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    references_file = os.path.join(script_dir, 'references.bib')
+    if os.path.exists(references_file):
+        shutil.copy(references_file, root_dir)
+        print(f"Copied references.bib to {root_dir}")
+    else:
+        print("Warning: references.bib not found in the script directory")
 
-    with open(latex_file, 'w') as f:
+    latex_content = create_latex_content(root_dir)
+    standalone_latex = create_standalone_latex(root_dir)
+
+    with open(latex_content_file, 'w') as f:
         f.write(latex_content)
 
-    print(f"LaTeX file created: {latex_file}")
+    with open(standalone_latex_file, 'w') as f:
+        f.write(standalone_latex)
+
+    print(f"LaTeX content file created: {latex_content_file}")
+    print(f"Standalone LaTeX file created: {standalone_latex_file}")
 
     try:
         original_dir = os.getcwd()
@@ -136,13 +182,16 @@ def main():
         
         for _ in range(2):
             subprocess.run(['pdflatex', '-shell-escape', 'svg_collection.tex'], check=True)
-            print(f"PDF file created: {pdf_file}")
+        subprocess.run(['bibtex', 'svg_collection'], check=True)  # Add this line
+        subprocess.run(['pdflatex', '-shell-escape', 'svg_collection.tex'], check=True)  # Add this line
+        subprocess.run(['pdflatex', '-shell-escape', 'svg_collection.tex'], check=True)  # Add this line
+        print(f"PDF file created: {pdf_file}")
         
         os.chdir(original_dir)
     except subprocess.CalledProcessError:
-        print("Error: Unable to create PDF. Make sure pdflatex is installed and in your PATH.")
+        print("Error: Unable to create PDF. Make sure pdflatex and bibtex are installed and in your PATH.")
     except FileNotFoundError:
-        print("Error: pdflatex command not found. Make sure LaTeX is installed on your system.")
+        print("Error: pdflatex or bibtex command not found. Make sure LaTeX is installed on your system.")
 
 if __name__ == "__main__":
     main()

@@ -113,17 +113,6 @@ def create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, normalize
                 # Normalize both mean and sem
                 hue_data.loc[:, 'mean'] = (hue_data['mean'] - min_val) / (max_val - min_val)
                 hue_data.loc[:, 'sem'] = hue_data['sem'] / (max_val - min_val)
-                
-                # Shift values to ensure all are positive
-                min_with_error = (hue_data['mean'] - hue_data['sem']).min()
-                if min_with_error < 0:
-                    shift = abs(min_with_error)
-                    hue_data.loc[:, 'mean'] += shift
-                
-                # Rescale to [0, 1] range
-                max_shifted = hue_data['mean'].max()
-                hue_data.loc[:, 'mean'] /= max_shifted
-                hue_data.loc[:, 'sem'] /= max_shifted
             else:
                 hue_data.loc[:, 'mean'] = 0.5  # Set to middle if all values are the same
                 hue_data.loc[:, 'sem'] = 0
@@ -142,7 +131,7 @@ def create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, normalize
     ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14, title_fontsize=16)
 
     if normalize:
-        ax.set_ylim(0, 1.1)  # Set y-axis limits for normalized data, giving some space for error bars
+        ax.set_ylim(hue_data['mean'].min() - 0.1, hue_data['mean'].max() + 0.1)  # Set y-axis limits based on actual range, allowing for some margin
     elif 'Memory' in y_col or 'Runtime' in y_col:
         ax.yaxis.set_major_formatter(FuncFormatter(format_y_axis))
 
@@ -155,6 +144,8 @@ def create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, normalize
         y_min, y_max = df_complete['mean'].min(), df_complete['mean'].max()
         if y_min > 0 and y_max / y_min > 1000:
             create_log_plot(df_complete, x_col, y_col, hue_col, outputdir, config)
+
+
 
 def create_log_plot(df_complete, x_col, y_col, hue_col, outputdir, config):
     plt.figure(figsize=(20, 10))

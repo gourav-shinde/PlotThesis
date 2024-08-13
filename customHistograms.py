@@ -120,7 +120,7 @@ def data_maker(data, config, output_dir):
 def plot_hist(data, config, output_dir, title_suffix=""):
     sorted_data = data.sort_values(by='mean').head(15)
 
-    plt.figure(figsize=(16, 10))
+    plt.figure(figsize=(15, 8))
     
     # Use a basic style and manually set properties
     plt.style.use('default')
@@ -134,26 +134,23 @@ def plot_hist(data, config, output_dir, title_suffix=""):
     num_bars = len(sorted_data)
     colors = plt.cm.Blues(np.linspace(0.3, 0.8, num_bars))
 
-    # Create the bar plot
     bars = plt.bar(range(num_bars), sorted_data['mean'], align='center', 
                    yerr=sorted_data['sem'], capsize=5, 
                    error_kw=dict(ecolor='darkblue', lw=1, capthick=1, capsize=5),
-                   color=colors)
+                   color=colors)  # Use the blue color palette
 
-    # Customize the plot
-    plt.title(f'Average {config["y"]} across Branches{title_suffix}\non {config["modal"].capitalize()}', 
-              fontsize=20, fontweight='bold', pad=20)
-    plt.xlabel("Branch", fontsize=14, labelpad=10)
-    plt.ylabel(config["y"], fontsize=14, labelpad=10)
+    plt.title(f'Histogram of Average {config["y"]} across Branches{title_suffix} on {config["modal"]}',
+              fontsize=14, fontweight='bold')
+    plt.xlabel("Branch", fontsize=12)
+    plt.ylabel(config["y"], fontsize=12)
 
     plt.xticks(range(num_bars), sorted_data['branch'], rotation=45, ha='right', fontsize=10)
     plt.yticks(fontsize=10)
 
     # Add value labels on top of each bar
-    for i, (v, err) in enumerate(zip(sorted_data['mean'], sorted_data['sem'])):
-        plt.text(i, v + err, f'{v:.2f}', ha='center', va='bottom', fontsize=9, fontweight='bold', color='darkblue')
+    for i, v in enumerate(sorted_data['mean']):
+        plt.text(i, v, f'{v:.2f}', ha='center', va='bottom', fontsize=9, fontweight='bold', color='darkblue')
 
-    # Adjust layout and save
     plt.tight_layout()
     filename = f"{config['title']}{title_suffix.replace(' ', '_')}.svg"
     filepath = os.path.join(output_dir, filename)
