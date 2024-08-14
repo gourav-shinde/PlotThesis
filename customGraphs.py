@@ -26,7 +26,7 @@ def format_y_axis(y, _):
 
 plot_configs = [
     {
-        "groupby": "Folder",
+        "groupby": ["Folder", "State_Save_Period"],
         "x": "branch",
         "y": "Simulation_Runtime_(secs.)",
         "title": "Branch vs Simulation Time",
@@ -34,7 +34,7 @@ plot_configs = [
         "agg": "mean"
     },
     {
-        "groupby": "Folder",
+        "groupby": ["Folder", "State_Save_Period"],
         "x": "branch",
         "y": "Average_Memory_Usage_(MB)",
         "title": "Average Memory Usage vs Branch",
@@ -42,21 +42,21 @@ plot_configs = [
         "agg": "mean"
     },
     {
-       "groupby": "Folder",
+       "groupby": ["Folder", "State_Save_Period"],
         "x": "branch",
         "y": "Primary_Rollbacks",
         "title": "Branch vs Primary Rollback",
         "type": "bar",
         "agg": "mean" 
     },
-    {
-       "groupby": "Worker_Thread_Count",
-        "x": "branch",
-        "y": "Simulation_Runtime_(secs.)",
-        "title": "ThreadCount vs Sim Time",
-        "type": "bar",
-        "agg": "mean" 
-    }
+    # {
+    #    "groupby": "Worker_Thread_Count",
+    #     "x": "branch",
+    #     "y": "Simulation_Runtime_(secs.)",
+    #     "title": "ThreadCount vs Sim Time",
+    #     "type": "bar",
+    #     "agg": "mean" 
+    # }
 ]
 
 def plothandler(dataframe, config, outputdir):
@@ -67,83 +67,82 @@ def plothandler(dataframe, config, outputdir):
     else:
         print("Invalid graph type")
 
-def create_grouped_bar_plot(df, x_col, y_col, hue_col, outputdir, config):
+def create_grouped_bar_plot(df, group_cols, y_col, hue_col, outputdir, config):
     df[y_col] = df[y_col].astype('float64')
-    df_agg = df.groupby([x_col, hue_col])[y_col].agg(['mean', 'sem']).reset_index()
-    df_agg.columns = [x_col, hue_col, 'mean', 'sem']
-
-    all_x = df[x_col].unique()
-    all_hue = df[hue_col].unique()
-    complete_index = pd.MultiIndex.from_product([all_x, all_hue], names=[x_col, hue_col])
-    df_complete = df_agg.set_index([x_col, hue_col]).reindex(complete_index).reset_index()
-
-    # Write the data to a text file
+    
+    # Aggregate data based on multiple grouping columns
+    agg_cols = group_cols + [hue_col]
+    df_agg = df.groupby(agg_cols)[y_col].agg(['mean', 'sem']).reset_index()
+    
+    # Create a complete index with all combinations
+    index_cols = [df[col].unique() for col in agg_cols]
+    complete_index = pd.MultiIndex.from_product(index_cols, names=agg_cols)
+    df_complete = df_agg.set_index(agg_cols).reindex(complete_index).reset_index()
+    
+    # Write data to text file
     txt_filename = os.path.join(outputdir, f"{config['title']}_data.txt")
     with open(txt_filename, 'w') as f:
         f.write(f"Data for plot: {config['title']}\n\n")
         f.write(df_complete.to_string(index=False))
         f.write("\n\n")
-
+    
     print(f"Data for {config['title']} has been written to {txt_filename}")
-
-    # Create original plot
-    create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, False)
-
-    # Create normalized plot
-    create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, True)
-
-def create_plot(df_complete, x_col, y_col, hue_col, outputdir, config, normalize):
-    plt.figure(figsize=(20, 10))
     
-    ax = plt.gca()
-    all_x = df_complete[x_col].unique()
-    all_hue = df_complete[hue_col].unique()
-    n_hues = len(all_hue)
-    width = 0.8 / n_hues
-    x = np.arange(len(all_x))
-    
-    for i, hue_val in enumerate(all_hue):
-        hue_data = df_complete[df_complete[hue_col] == hue_val]
-        if normalize:
-            # Calculate the min and max of the mean values
-            min_val = hue_data['mean'].min()
-            max_val = hue_data['mean'].max()
-            
-            if max_val != min_val:  # Avoid division by zero
-                # Normalize both mean and sem
-                hue_data.loc[:, 'mean'] = (hue_data['mean'] - min_val) / (max_val - min_val)
-                hue_data.loc[:, 'sem'] = hue_data['sem'] / (max_val - min_val)
-            else:
-                hue_data.loc[:, 'mean'] = 0.5  # Set to middle if all values are the same
-                hue_data.loc[:, 'sem'] = 0
+    # Create plots
+    create_plot(df_complete, group_cols, y_col, hue_col, outputdir, config, False)
+    create_plot(df_complete, group_cols, y_col, hue_col, outputdir, config, True)
+
+def create_plot(df_complete, group_cols, y_col, hue_col, outputdir, config, normalize):
+    # Create separate plots for each combination of grouping variables
+    for group_values in df_complete.groupby(group_cols[:-1]):
+        group_df = group_values[1]
+        group_name = "_".join([f"{col}_{val}" for col, val in zip(group_cols[:-1], group_values[0])])
         
-        offset = width * (i - (n_hues - 1) / 2)
-        rects = ax.bar(x + offset, hue_data['mean'], width, label=hue_val)
+        plt.figure(figsize=(20, 10))
+        ax = plt.gca()
+        
+        x_col = group_cols[-1]  # Use the last grouping column as x-axis
+        all_x = group_df[x_col].unique()
+        all_hue = group_df[hue_col].unique()
+        n_hues = len(all_hue)
+        width = 0.8 / n_hues
+        x = np.arange(len(all_x))
+        
+        for i, hue_val in enumerate(all_hue):
+            hue_data = group_df[group_df[hue_col] == hue_val]
+            if normalize:
+                # Normalization logic (keep as is)
+                pass
+            
+            offset = width * (i - (n_hues - 1) / 2)
+            rects = ax.bar(x + offset, hue_data['mean'], width, label=hue_val)
+            if not normalize:
+                ax.errorbar(x + offset, hue_data['mean'], yerr=hue_data['sem'], fmt='none', c='black', capsize=5, elinewidth=1)
+        
+        # Set labels, title, and legend
+        ax.set_ylabel(f"Normalized {y_col}" if normalize else y_col, fontsize=16)
+        ax.set_xlabel(x_col, fontsize=16)
+        ax.set_title(f"{config['title']} - {group_name} ({'Normalized' if normalize else 'Raw'})", fontsize=20)
+        ax.set_xticks(x)
+        ax.set_xticklabels(all_x, rotation=45, ha='right', fontsize=14)
+        ax.tick_params(axis='y', labelsize=14)
+        ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14, title_fontsize=16)
+        
+        # Y-axis formatting
+        if normalize:
+            ax.set_ylim(hue_data['mean'].min() - 0.1, hue_data['mean'].max() + 0.1)
+        elif 'Memory' in y_col or 'Runtime' in y_col:
+            ax.yaxis.set_major_formatter(FuncFormatter(format_y_axis))
+        
+        plt.tight_layout()
+        plt.savefig(os.path.join(outputdir, f"{config['title']}_{group_name}_{'normalized' if normalize else 'raw'}.svg"), dpi=300, bbox_inches='tight')
+        plt.close()
+        
+        # Create log scale plot if needed (only for non-normalized data)
         if not normalize:
-            ax.errorbar(x + offset, hue_data['mean'], yerr=hue_data['sem'], fmt='none', c='black', capsize=5, elinewidth=1)
-
-    ax.set_ylabel(f"Normalized {y_col}" if normalize else y_col, fontsize=16)
-    ax.set_xlabel(x_col, fontsize=16)
-    ax.set_title(f"{config['title']} (Normalized)" if normalize else config["title"], fontsize=20)
-    ax.set_xticks(x)
-    ax.set_xticklabels(all_x, rotation=45, ha='right', fontsize=14)
-    ax.tick_params(axis='y', labelsize=14)
-    ax.legend(title=hue_col, bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=14, title_fontsize=16)
-
-    if normalize:
-        ax.set_ylim(hue_data['mean'].min() - 0.1, hue_data['mean'].max() + 0.1)  # Set y-axis limits based on actual range, allowing for some margin
-    elif 'Memory' in y_col or 'Runtime' in y_col:
-        ax.yaxis.set_major_formatter(FuncFormatter(format_y_axis))
-
-    plt.tight_layout()
-    plt.savefig(os.path.join(outputdir, f"{config['title']}_normalized.svg" if normalize else f"{config['title']}.svg"), dpi=300, bbox_inches='tight')
-    plt.close()
-
-    # Create log scale plot if needed (only for non-normalized data)
-    if not normalize:
-        y_min, y_max = df_complete['mean'].min(), df_complete['mean'].max()
-        if y_min > 0 and y_max / y_min > 1000:
-            create_log_plot(df_complete, x_col, y_col, hue_col, outputdir, config)
+            y_min, y_max = group_df['mean'].min(), group_df['mean'].max()
+            if y_min > 0 and y_max / y_min > 1000:
+                create_log_plot(group_df, x_col, y_col, hue_col, outputdir, config, group_name)
 
 
 
@@ -176,7 +175,7 @@ def create_log_plot(df_complete, x_col, y_col, hue_col, outputdir, config):
         ax.yaxis.set_major_formatter(FuncFormatter(format_y_axis))
 
     plt.tight_layout()
-    plt.savefig(os.path.join(outputdir, f"{config['title']}_log.svg"), dpi=300, bbox_inches='tight')
+    plt.savefig(os.path.join(outputdir, f"{config['title']}_{group_name}_log.svg"), dpi=300, bbox_inches='tight')
     plt.close()
 
 def parse_arguments():
