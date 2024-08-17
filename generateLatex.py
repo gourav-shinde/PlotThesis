@@ -51,7 +51,7 @@ def create_latex_content(root_dir):
     
     # the Info center
     
-    paste_file = os.path.join(script_dir, 'BranchDefinitions.txt')
+    paste_file = os.path.join(script_dir, 'BranchDefinitions2.txt')
     with open(paste_file, 'r') as f:
         paste_content = f.read()
     content.append(paste_content)

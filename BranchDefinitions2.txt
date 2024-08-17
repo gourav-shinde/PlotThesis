@@ -1,0 +1,19 @@
+\begin{table}[h]
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{|l|X|X|X|X|X|X|}
+\hline
+\textbf{Model} & \textbf{Grid Size} & \textbf{Max Sim Time} & \textbf{Worker Threads} & \textbf{State Save Period} & \textbf{Iter-ations} & \textbf{GVT Period} \\
+\hline
+Epidemic 10k-ba & 10k & 20000 & 3 & 5, 8, 10 & 5 & 1000 \\
+\hline
+Epidemic 100k-ba & 100k & 6000 & 3 & 5, 8, 10 & 5 & 1000 \\
+\hline
+PCS 10k & 10k & 500 & 3 & 5, 8, 10 & 5 & 1000 \\
+\hline
+Traffic 10k & 10k & 10000 & 3 & 5, 8, 10 & 5 & 1000 \\
+\hline
+\end{tabularx}
+\caption{Modified configuration summary for different models}
+\label{table:modified_model_configs}
+\end{table}
