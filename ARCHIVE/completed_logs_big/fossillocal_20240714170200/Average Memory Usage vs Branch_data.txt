@@ -1,0 +1,12 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder        branch   mean       sem
+         pcs-10k        master 289.30  6.486869
+         pcs-10k fossil_thread 289.15  6.349171
+ epidemic-10k-ba        master 932.45 55.709702
+ epidemic-10k-ba fossil_thread 898.55 54.684380
+     traffic-10k        master 324.90 20.072895
+     traffic-10k fossil_thread 324.60 19.642471
+epidemic-100k-ba        master 652.10 44.152627
+epidemic-100k-ba fossil_thread 653.60 45.034604
+

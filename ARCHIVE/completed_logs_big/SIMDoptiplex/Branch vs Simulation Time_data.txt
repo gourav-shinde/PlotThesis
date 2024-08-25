@@ -1,0 +1,13 @@
+Data for plot: Branch vs Simulation Time
+
+          Folder         branch       mean      sem
+    epidemic-10k         master 138.213500 7.083557
+    epidemic-10k           SIMD 140.601769 6.679189
+    epidemic-10k relaxedCompare 142.182353 5.445186
+     traffic-10k         master  14.993540 0.391638
+     traffic-10k           SIMD  15.269900 0.299160
+     traffic-10k relaxedCompare   0.101151 0.011285
+epidemic-100k-ba         master  34.986060 0.305085
+epidemic-100k-ba           SIMD  36.271960 0.303045
+epidemic-100k-ba relaxedCompare  35.203950 0.337858
+

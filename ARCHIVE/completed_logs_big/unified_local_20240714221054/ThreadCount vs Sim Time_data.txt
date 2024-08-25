@@ -1,0 +1,8 @@
+Data for plot: ThreadCount vs Sim Time
+
+ Worker_Thread_Count            branch      mean       sem
+                   3            master 52.557807 12.010660
+                   3 UnifiedMainBranch 52.110513 10.376203
+                   6            master 36.005522  7.915352
+                   6 UnifiedMainBranch 37.519473  6.930791
+

@@ -1,0 +1,28 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder  State_Save_Period            branch  mean        sem
+ epidemic-10k-ba                  8            master 295.6  29.773478
+ epidemic-10k-ba                  8 UnifiedMainBranch 755.5  26.282123
+ epidemic-10k-ba                 10            master 362.6 137.130084
+ epidemic-10k-ba                 10 UnifiedMainBranch 622.4  33.498657
+ epidemic-10k-ba                  5            master   NaN        NaN
+ epidemic-10k-ba                  5 UnifiedMainBranch   NaN        NaN
+     traffic-10k                  8            master 148.2   1.019804
+     traffic-10k                  8 UnifiedMainBranch 541.6   4.456456
+     traffic-10k                 10            master 145.4   3.043025
+     traffic-10k                 10 UnifiedMainBranch 533.6   3.009983
+     traffic-10k                  5            master 147.6   1.536229
+     traffic-10k                  5 UnifiedMainBranch 576.2   5.808614
+epidemic-100k-ba                  8            master 331.0  19.929877
+epidemic-100k-ba                  8 UnifiedMainBranch 595.6   9.157511
+epidemic-100k-ba                 10            master 485.0  84.096968
+epidemic-100k-ba                 10 UnifiedMainBranch 543.0  12.103718
+epidemic-100k-ba                  5            master 340.6  24.979191
+epidemic-100k-ba                  5 UnifiedMainBranch 771.8  19.945927
+     traffic-20k                  8            master 155.6   2.942788
+     traffic-20k                  8 UnifiedMainBranch 482.0   2.144761
+     traffic-20k                 10            master 152.8   3.039737
+     traffic-20k                 10 UnifiedMainBranch 478.0   3.178050
+     traffic-20k                  5            master 156.4   1.691153
+     traffic-20k                  5 UnifiedMainBranch 506.2   5.219195
+

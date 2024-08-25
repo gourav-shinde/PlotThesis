@@ -1,0 +1,8 @@
+Data for plot: ThreadCount vs Sim Time
+
+ Worker_Thread_Count        branch      mean       sem
+                   3        master 54.617833 10.485370
+                   3 fossil_thread 54.674747 10.500163
+                   6        master 37.565286  6.974259
+                   6 fossil_thread 37.858641  7.044543
+

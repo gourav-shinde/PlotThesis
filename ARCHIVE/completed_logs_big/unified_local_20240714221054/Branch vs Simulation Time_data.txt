@@ -1,0 +1,10 @@
+Data for plot: Branch vs Simulation Time
+
+          Folder            branch      mean      sem
+ epidemic-10k-ba            master 96.218160 6.341077
+ epidemic-10k-ba UnifiedMainBranch 90.537580 5.460304
+     traffic-10k            master 10.514213 0.511898
+     traffic-10k UnifiedMainBranch 19.910430 0.637938
+epidemic-100k-ba            master 26.112620 1.436470
+epidemic-100k-ba UnifiedMainBranch 23.996970 1.212221
+

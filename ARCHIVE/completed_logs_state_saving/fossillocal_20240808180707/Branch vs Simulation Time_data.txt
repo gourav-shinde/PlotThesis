@@ -1,0 +1,36 @@
+Data for plot: Branch vs Simulation Time
+
+          Folder  State_Save_Period        branch      mean      sem
+         pcs-10k                  5        master  11.31382 0.078313
+         pcs-10k                  5 fossil_thread  11.24430 0.086920
+         pcs-10k                  8        master  10.79152 0.163587
+         pcs-10k                  8 fossil_thread  10.52900 0.089135
+         pcs-10k                 10        master  10.83562 0.111901
+         pcs-10k                 10 fossil_thread  10.91490 0.077612
+         pcs-10k                 32        master       NaN      NaN
+         pcs-10k                 32 fossil_thread       NaN      NaN
+ epidemic-10k-ba                  5        master       NaN      NaN
+ epidemic-10k-ba                  5 fossil_thread       NaN      NaN
+ epidemic-10k-ba                  8        master       NaN      NaN
+ epidemic-10k-ba                  8 fossil_thread       NaN      NaN
+ epidemic-10k-ba                 10        master 151.41480 0.135011
+ epidemic-10k-ba                 10 fossil_thread 149.31060 0.806855
+ epidemic-10k-ba                 32        master 113.81720 0.946796
+ epidemic-10k-ba                 32 fossil_thread 114.03420 0.930561
+     traffic-10k                  5        master  12.80834 0.101639
+     traffic-10k                  5 fossil_thread  12.83422 0.071918
+     traffic-10k                  8        master  12.37892 0.031555
+     traffic-10k                  8 fossil_thread  12.41680 0.058472
+     traffic-10k                 10        master  12.35946 0.057834
+     traffic-10k                 10 fossil_thread  12.40912 0.071046
+     traffic-10k                 32        master       NaN      NaN
+     traffic-10k                 32 fossil_thread       NaN      NaN
+epidemic-100k-ba                  5        master  54.44116 0.108833
+epidemic-100k-ba                  5 fossil_thread  54.15248 0.377936
+epidemic-100k-ba                  8        master  44.52380 0.105667
+epidemic-100k-ba                  8 fossil_thread  44.34900 0.333865
+epidemic-100k-ba                 10        master  41.33368 0.674798
+epidemic-100k-ba                 10 fossil_thread  41.25504 0.088589
+epidemic-100k-ba                 32        master       NaN      NaN
+epidemic-100k-ba                 32 fossil_thread       NaN      NaN
+

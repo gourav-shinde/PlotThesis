@@ -1,0 +1,22 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder  State_Save_Period branch         mean         sem
+         pcs-10k                  5 master 53396.400000 8533.357458
+         pcs-10k                  5 SynGVT 58134.066667 9252.236266
+         pcs-10k                  8 master 51701.866667 8324.067383
+         pcs-10k                  8 SynGVT 58544.266667 9510.408654
+         pcs-10k                 10 master 51746.600000 7759.467519
+         pcs-10k                 10 SynGVT 58486.200000 9521.124857
+ epidemic-10k-ba                  5 master   225.272727   18.845829
+ epidemic-10k-ba                  5 SynGVT   164.333333   30.065748
+ epidemic-10k-ba                  8 master   170.600000   34.127185
+ epidemic-10k-ba                  8 SynGVT   172.200000   34.617667
+ epidemic-10k-ba                 10 master   187.266667   35.434106
+ epidemic-10k-ba                 10 SynGVT   146.800000   31.628830
+epidemic-100k-ba                  5 master    20.666667    4.570784
+epidemic-100k-ba                  5 SynGVT    15.600000    3.517033
+epidemic-100k-ba                  8 master    20.400000    4.947149
+epidemic-100k-ba                  8 SynGVT    18.466667    4.450646
+epidemic-100k-ba                 10 master    17.933333    4.725278
+epidemic-100k-ba                 10 SynGVT    20.400000    4.766750
+

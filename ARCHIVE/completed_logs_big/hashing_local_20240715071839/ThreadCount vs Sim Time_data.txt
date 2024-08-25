@@ -1,0 +1,8 @@
+Data for plot: ThreadCount vs Sim Time
+
+ Worker_Thread_Count     branch      mean      sem
+                   3     master 41.782420 9.792097
+                   3 HashingPOC 44.085640 9.981585
+                   6     master 29.156099 6.536287
+                   6 HashingPOC 30.451177 6.545197
+

@@ -1,0 +1,22 @@
+Data for plot: Branch vs Simulation Time
+
+          Folder  State_Save_Period branch       mean      sem
+         pcs-10k                  5 master  10.634918 0.424749
+         pcs-10k                  5 SynGVT  10.218780 0.396784
+         pcs-10k                  8 master  10.261795 0.411903
+         pcs-10k                  8 SynGVT   9.979025 0.381483
+         pcs-10k                 10 master  10.187596 0.383882
+         pcs-10k                 10 SynGVT   9.914433 0.401596
+ epidemic-10k-ba                  5 master 160.337091 8.377724
+ epidemic-10k-ba                  5 SynGVT 162.245067 6.694059
+ epidemic-10k-ba                  8 master 140.370867 5.988497
+ epidemic-10k-ba                  8 SynGVT 131.347067 5.484916
+ epidemic-10k-ba                 10 master 129.555000 5.487015
+ epidemic-10k-ba                 10 SynGVT 121.834100 5.089236
+epidemic-100k-ba                  5 master  48.476887 1.874438
+epidemic-100k-ba                  5 SynGVT  43.117380 1.511444
+epidemic-100k-ba                  8 master  39.682400 1.576284
+epidemic-100k-ba                  8 SynGVT  35.108813 1.251038
+epidemic-100k-ba                 10 master  36.166080 1.356563
+epidemic-100k-ba                 10 SynGVT  32.533873 1.240631
+

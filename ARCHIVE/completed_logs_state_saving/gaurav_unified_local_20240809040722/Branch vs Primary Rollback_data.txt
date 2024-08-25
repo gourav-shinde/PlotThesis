@@ -1,0 +1,22 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder  State_Save_Period            branch     mean         sem
+ epidemic-10k-ba                  5            master     60.5    1.500000
+ epidemic-10k-ba                  5 UnifiedMainBranch     16.2    4.619524
+ epidemic-10k-ba                  8            master     15.4    5.035871
+ epidemic-10k-ba                  8 UnifiedMainBranch      9.0    5.813777
+ epidemic-10k-ba                 10            master     38.4   11.002727
+ epidemic-10k-ba                 10 UnifiedMainBranch      6.4    1.536229
+epidemic-100k-ba                  5            master      0.0    0.000000
+epidemic-100k-ba                  5 UnifiedMainBranch      0.0    0.000000
+epidemic-100k-ba                  8            master      0.0    0.000000
+epidemic-100k-ba                  8 UnifiedMainBranch      0.0    0.000000
+epidemic-100k-ba                 10            master      0.0    0.000000
+epidemic-100k-ba                 10 UnifiedMainBranch      0.0    0.000000
+     traffic-20k                  5            master  10484.8  723.576769
+     traffic-20k                  5 UnifiedMainBranch 231148.4 3839.611134
+     traffic-20k                  8            master   9760.6  356.530868
+     traffic-20k                  8 UnifiedMainBranch 222066.4 3054.232057
+     traffic-20k                 10            master   9083.4  246.646022
+     traffic-20k                 10 UnifiedMainBranch 217249.6 1632.438869
+

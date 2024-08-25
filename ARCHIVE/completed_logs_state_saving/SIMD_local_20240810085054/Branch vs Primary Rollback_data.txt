@@ -1,0 +1,36 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder  State_Save_Period         branch    mean        sem
+         pcs-10k                  5         master 15337.6 593.005363
+         pcs-10k                  5 relaxedCompare     1.6   0.600000
+         pcs-10k                  8         master 13207.4 679.765960
+         pcs-10k                  8 relaxedCompare     1.0   0.000000
+         pcs-10k                 10         master 13420.2 849.436896
+         pcs-10k                 10 relaxedCompare     1.6   0.600000
+         pcs-10k                 32         master     NaN        NaN
+         pcs-10k                 32 relaxedCompare     NaN        NaN
+ epidemic-10k-ba                  5         master     NaN        NaN
+ epidemic-10k-ba                  5 relaxedCompare     NaN        NaN
+ epidemic-10k-ba                  8         master     NaN        NaN
+ epidemic-10k-ba                  8 relaxedCompare     NaN        NaN
+ epidemic-10k-ba                 10         master    26.2   6.414047
+ epidemic-10k-ba                 10 relaxedCompare    10.2   2.615339
+ epidemic-10k-ba                 32         master     0.0   0.000000
+ epidemic-10k-ba                 32 relaxedCompare     0.0   0.000000
+     traffic-10k                  5         master  3488.4 232.697357
+     traffic-10k                  5 relaxedCompare     6.6   1.536229
+     traffic-10k                  8         master  2960.0 450.604594
+     traffic-10k                  8 relaxedCompare     6.6   1.122497
+     traffic-10k                 10         master  3249.0  88.209977
+     traffic-10k                 10 relaxedCompare     6.8   1.907878
+     traffic-10k                 32         master     NaN        NaN
+     traffic-10k                 32 relaxedCompare     NaN        NaN
+epidemic-100k-ba                  5         master     0.0   0.000000
+epidemic-100k-ba                  5 relaxedCompare     0.0   0.000000
+epidemic-100k-ba                  8         master     0.0   0.000000
+epidemic-100k-ba                  8 relaxedCompare     0.0   0.000000
+epidemic-100k-ba                 10         master     0.0   0.000000
+epidemic-100k-ba                 10 relaxedCompare     0.0   0.000000
+epidemic-100k-ba                 32         master     NaN        NaN
+epidemic-100k-ba                 32 relaxedCompare     NaN        NaN
+

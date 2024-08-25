@@ -1,0 +1,863 @@
+\section{Discussion}
+
+In this section, we discuss the various aspects of our research on the WARPED simulation kernel, including model characteristics, configuration considerations, and the performance implications of different branch implementations.
+
+\subsection{Model Characteristics and Performance}
+
+The choice of simulation model significantly influences the performance of the WARPED kernel. We examined several models, including synthetic models like Traffic and PCS, as well as real-world models such as Epidemic-10k-ba and Epidemic-100k-ba \cite{perumalla2012discrete}. These models vary in their computational requirements and event distribution patterns, affecting the overall simulation performance.
+
+The Epidemic model, for instance, simulates disease outbreak phenomena using a combination of reaction and diffusion processes \cite{barrett2008episimdemics}. It incorporates complex interactions between entities, network structures (e.g., Watts-Strogatz \cite{watts1998collective} and Barabasi-Albert \cite{barabasi1999emergence} graphs), and geographical diffusion, making it particularly challenging for parallel discrete event simulation (PDES) systems.
+
+\subsection{Configuration and Platform Considerations}
+
+While testing proposed changes to the WARPED kernel, it is crucial to determine the scenarios and platforms where they perform optimally. Factors such as instruction sets and specialized hardware can significantly impact performance. As noted earlier, the model itself plays a critical role in determining whether a particular configuration of WARPED works efficiently and quickly.
+
+The debate between GPU and CPU computing for PDES algorithms is ongoing. While GPUs excel at performing simple tasks quickly, CPUs are better suited for handling complex, lengthy computations often required in sophisticated simulations at the Logical Process (LP) level. The choice between platforms depends on the specific requirements of the model and the nature of the computations involved.
+
+\subsection{Performance Factors and Optimization}
+
+Several factors influence the performance of WARPED simulations:
+
+\subsubsection{Event Processing Time}
+
+Models like PCS have longer processing times for events at each LP. The grid size, representing the number of LPs, determines the scope of the simulation. It's important to note that the maximum simulation time (max-sim-time) represents the timestamp of the last generated event, not the actual runtime of the simulation.
+
+\subsection{Performance Optimization: Rollbacks and State Saving}
+
+\subsubsection{Introduction to Rollbacks and State Saving}
+
+In Parallel Discrete Event Simulation (PDES), the efficiency of rollbacks and state saving mechanisms plays a crucial role in overall performance. This section explores the intricate relationship between state-saving periods and rollback lengths, and presents a mathematical model to optimize these parameters.
+
+\subsubsection{State Saving and Rollback Relationship}
+
+State saving and rollbacks are interdependent processes in PDES. The frequency of state saving directly impacts the length of potential rollbacks. More frequent state saves reduce the average rollback length but increase overhead, while less frequent saves lead to potentially longer rollbacks but reduce save overhead.
+
+\subsection{Branch Implementations}
+
+We explored several branch implementations for the WARPED kernel, each focusing on different optimization strategies:
+
+\subsubsection{Master Branch}
+
+The master branch represents the original implementation of the WARPED 2 kernel. It supports both asynchronous and synchronous Global Virtual Time (GVT) implementations, uses a multiset scheduled queue, and maintains separate processed and unprocessed input queues. This serves as our baseline for comparison with other optimizations.
+
+\subsubsection{Fossil Branch}
+
+The fossil branch introduces a separate fossil collection thread, eliminating the need for locks during fossil collection. Key features include:
+
+\begin{itemize}
+    \item Tweaks to algorithms to avoid locks during fossil collection
+    \item Potential performance gains on systems without hyperthreading
+    \item Similar runtime to master branch on systems with hyperthreading
+\end{itemize}
+
+Our experiments revealed that simulations with 3+1 threads (3 worker threads and 1 fossil collection thread) resulted in fewer rollbacks. Increasing to 6 threads provided some performance gain, but the improvement was limited due to the increased number of rollbacks. This behavior is likely related to cache swapping delays on our test system with 4 main cores.
+
+\subsubsection{SIMD Branch}
+
+The SIMD branch aimed to leverage SIMD instructions provided by the AVX platform. However, significant challenges were encountered:
+
+\begin{itemize}
+    \item Requires contiguous memory allocation for members of the Event class
+    \item Necessitates overhauling MPI serialization for multi-node simulations
+    \item Implementation incomplete due to extensive changes required in the WARPED 2 algorithm
+\end{itemize}
+
+While not fully implemented, this branch highlights the potential for SIMD optimizations in future work.
+
+\subsubsection{Hashing Branch}
+
+The hashing branch implements a technique to reduce the cost of event comparisons:
+
+\begin{itemize}
+    \item Uses hashing for LP names
+    \item One-time hashing cost followed by quick comparisons
+    \item Showed performance gains in experiments
+    \item Potential for further improvement using advanced techniques like Google's MurmurHash
+\end{itemize}
+
+\subsubsection{Relaxed Compare Branch}
+
+This branch explores a relaxed compare function based on the hypothesis that strict ordering in the scheduled queue is not always necessary:
+
+\begin{itemize}
+    \item Relies on strict ordering at the LP level instead of the global level
+    \item Can fail in certain scenarios
+    \item Showed significant performance gains for some models, particularly those with high LP event processing times
+\end{itemize}
+
+\subsubsection{Unified Queue Branch}
+
+The unified queue branch implements a combined approach:
+
+\begin{itemize}
+    \item Joins processed and unprocessed events into a single ordered circular queue
+    \item Uses synchronous GVT
+    \item Implements a multiset schedule queue with relaxed ordering
+    \item Utilizes a circular random access iterator for efficient sorting
+    \item Eliminates unnecessary barriers in the simulation
+\end{itemize}
+
+This branch showed promising results by streamlining queue management and reducing synchronization overhead.
+
+\subsection{GVT Implementation Comparison}
+
+Across our branch implementations, we observed that:
+
+\begin{itemize}
+    \item Synchronous GVT implementation showed better performance on single-node simulations
+    \item Asynchronous GVT performed better on multi-node systems
+\end{itemize}
+
+These findings align with the general industry understanding of GVT types and their optimal use cases.
+
+\subsection{Future Work}
+
+Future research could explore several promising directions:
+
+\begin{itemize}
+    \item Leveraging new hardware features, such as eco-cores in modern CPUs, for tasks like fossil collection
+    \item Further optimization of the SIMD implementation to overcome current challenges
+    \item Exploration of advanced hashing techniques to improve event comparison efficiency
+    \item Investigating hybrid approaches that combine the strengths of different branch implementations
+\end{itemize}
+
+In conclusion, our research has highlighted the complex interplay between model characteristics, configuration choices, and branch implementations in optimizing the performance of the WARPED simulation kernel. Each branch implementation offers unique advantages and trade-offs, demonstrating the potential for significant improvements in simulation efficiency through targeted optimizations. By carefully considering these factors and applying the most suitable optimizations for specific simulation scenarios, we can continue to enhance the capabilities and performance of the WARPED simulation kernel.
+\newpage
+\section{Label Definitions}
+\begin{table}[h]
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{|l|X|X|X|X|X|X|}
+\hline
+\textbf{Model} & \textbf{Grid Size} & \textbf{Max Sim Time} & \textbf{Worker Threads} & \textbf{State Save Period} & \textbf{Iter-ations} & \textbf{GVT Period} \\
+\hline
+Epidemic 10k-ba & 10k & 20000 & 3, 6 & 32 & 5 & 1000 \\
+\hline
+Epidemic 100k-ba & 100k & 6000 & 3, 6 & 32 & 5 & 1000 \\
+\hline
+PCS 10k & 10k & 500 & 3, 6 & 32 & 5 & 1000 \\
+\hline
+Traffic 10k & 10k & 10000 & 3, 6 & 32 & 5 & 1000 \\
+\hline
+\end{tabularx}
+\caption{Modified configuration summary for different models}
+\label{table:modified_model_configs}
+\end{table}
+\newpage
+\newpage
+
+\section{fossil}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossil_20240714135858/ac0af258_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossil_20240714135858/7bcf53de_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossil_20240714135858/6bbf93b7_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossil_20240714135858/991d8312_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossil_20240714135858/b22f56da_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossil_20240714135858/92a5bd91_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossil_20240714135858/234e2174_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossil_20240714135858/8648f61b_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossil_20240714135858/72d85a8c_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{fossillocal}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossillocal_20240714170200/186b0a14_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossillocal_20240714170200/6420ea71_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossillocal_20240714170200/66906352_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossillocal_20240714170200/6d3e3c37_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossillocal_20240714170200/b44b0a5f_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossillocal_20240714170200/6dce1888_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossillocal_20240714170200/2806a643_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossillocal_20240714170200/c343c88b_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{fossillocal_20240714170200/ad96687b_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{gvt\_comparison}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_20240727143433/0d7e91f3_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_20240727143433/22b0a4e8_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_20240727143433/565b32fb_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_20240727143433/05923520_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_20240727143433/62ff0b05_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_20240727143433/a7799f48_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_20240727143433/23600081_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_20240727143433/5ebb1d8c_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_20240727143433/6d244d8d_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{gvt\_comparison\_local}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_local_20240726050430/d76b30ff_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_local_20240726050430/14b6e8aa_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_local_20240726050430/f4f1940b_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_local_20240726050430/446458de_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_local_20240726050430/8f25a6a5_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_local_20240726050430/38f09ffd_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_local_20240726050430/73c3ee79_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_local_20240726050430/3a895e17_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{gvt_comparison_local_20240726050430/8c4f80ed_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{hashing}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_20240715045857/2939f413_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_20240715045857/b4991e2d_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_20240715045857/db8bc7ee_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_20240715045857/a8fa0ebc_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_20240715045857/7a339584_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_20240715045857/b0e1d41f_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_20240715045857/4b954d7b_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_20240715045857/257407d5_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_20240715045857/bbbdfda9_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{hashing\_local}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_local_20240715071839/1c233fea_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_local_20240715071839/09fb4e84_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_local_20240715071839/274f4cdd_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_local_20240715071839/f7b5f89e_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_local_20240715071839/6a804473_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_local_20240715071839/44f1798e_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_local_20240715071839/01759f92_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_local_20240715071839/925120df_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{hashing_local_20240715071839/b9436bd7_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{SIMD}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_20240715105337/2b2ed9e0_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_20240715105337/9027776e_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_20240715105337/95845e84_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_20240715105337/6cfaa956_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_20240715105337/4d6e5949_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_20240715105337/f0f8e74c_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_20240715105337/7e70d70f_Branch vs Simulation Time_log.svg}
+\caption{Branch vs Simulation Time\_log}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_20240715105337/2f27291a_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_20240715105337/9cb5729f_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_20240715105337/db96465b_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{SIMD\_local}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_local_20240715140737/b95c9bf2_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_local_20240715140737/70f12a44_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_local_20240715140737/035729a1_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_local_20240715140737/965a6420_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_local_20240715140737/a706a3db_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_local_20240715140737/e3ceebd1_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_local_20240715140737/35a3b0f0_Branch vs Simulation Time_log.svg}
+\caption{Branch vs Simulation Time\_log}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_local_20240715140737/34e8ae43_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_local_20240715140737/61e1673e_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMD_local_20240715140737/5fb02f1d_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{SIMDoptiplex}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMDoptiplex/8f80b1c1_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMDoptiplex/3a7b92c9_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMDoptiplex/779962c3_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMDoptiplex/5ec5a3ce_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMDoptiplex/810f4201_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMDoptiplex/9c2d6095_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMDoptiplex/f6a6645c_Branch vs Simulation Time_log.svg}
+\caption{Branch vs Simulation Time\_log}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMDoptiplex/b533ee4f_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMDoptiplex/684269f4_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{SIMDoptiplex/ce38f0cb_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{Top Performers}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{Top Performers/cd3d33d9_Epidemic100kPerformers_(Average).svg}
+\caption{Epidemic100kPerformers\_(Average)}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{Top Performers/bdea568b_EpidemicPerformers_(Average).svg}
+\caption{EpidemicPerformers\_(Average)}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{Top Performers/5e758277_PCSPerformers_(Average).svg}
+\caption{PCSPerformers\_(Average)}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{Top Performers/e5cf195a_TrafficPerformers_(Average).svg}
+\caption{TrafficPerformers\_(Average)}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{unified}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_20240714194407/c7934a42_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_20240714194407/ff4dc3b8_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_20240714194407/984b2c31_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_20240714194407/2ee24a76_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_20240714194407/c83532e7_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_20240714194407/7734d34d_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_20240714194407/fb034ef5_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_20240714194407/78952bef_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_20240714194407/8121dd78_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+
+\section{unified\_local}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_local_20240714221054/724ac2b3_Average Memory Usage vs Branch.svg}
+\caption{Average Memory Usage vs Branch}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_local_20240714221054/45071ad6_Average Memory Usage vs Branch_normalized.svg}
+\caption{Average Memory Usage vs Branch\_normalized}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_local_20240714221054/dfca7db9_Branch vs Primary Rollback.svg}
+\caption{Branch vs Primary Rollback}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_local_20240714221054/69f96723_Branch vs Primary Rollback_log.svg}
+\caption{Branch vs Primary Rollback\_log}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_local_20240714221054/0fa26a14_Branch vs Primary Rollback_normalized.svg}
+\caption{Branch vs Primary Rollback\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_local_20240714221054/d4c9dffc_Branch vs Simulation Time.svg}
+\caption{Branch vs Simulation Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_local_20240714221054/bede412d_Branch vs Simulation Time_normalized.svg}
+\caption{Branch vs Simulation Time\_normalized}
+\end{figure}
+\vspace{1cm}
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_local_20240714221054/693c43f7_ThreadCount vs Sim Time.svg}
+\caption{ThreadCount vs Sim Time}
+\end{figure}
+\vspace{1cm}
+\newpage
+\begin{figure}[H]
+\centering
+\includesvg[width=0.9\textwidth, height=0.4\textheight, keepaspectratio]{unified_local_20240714221054/54b55a94_ThreadCount vs Sim Time_normalized.svg}
+\caption{ThreadCount vs Sim Time\_normalized}
+\end{figure}
+\vspace{1cm}

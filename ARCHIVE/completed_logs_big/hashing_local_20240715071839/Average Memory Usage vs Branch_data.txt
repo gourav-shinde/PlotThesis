@@ -1,0 +1,12 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder     branch  mean       sem
+         pcs-10k     master 289.7  9.527796
+         pcs-10k HashingPOC 302.0  8.473488
+ epidemic-10k-ba     master 799.6 91.714557
+ epidemic-10k-ba HashingPOC 763.7 74.830928
+     traffic-10k     master 318.7 17.766417
+     traffic-10k HashingPOC 327.3 19.449107
+epidemic-100k-ba     master 650.2 42.439185
+epidemic-100k-ba HashingPOC 625.3 37.611183
+

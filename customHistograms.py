@@ -130,26 +130,25 @@ def plot_hist(data, config, output_dir, title_suffix=""):
     plt.rcParams['grid.alpha'] = 0.3
     plt.rcParams['grid.color'] = 'lightgray'
     
-    # Create a blue color palette
-    num_bars = len(sorted_data)
-    colors = plt.cm.Blues(np.linspace(0.3, 0.8, num_bars))
+    # Use a single color suitable for research papers
+    bar_color = '#4472C4'  # A professional blue color
 
-    bars = plt.bar(range(num_bars), sorted_data['mean'], align='center', 
+    bars = plt.bar(range(len(sorted_data)), sorted_data['mean'], align='center', 
                    yerr=sorted_data['sem'], capsize=5, 
-                   error_kw=dict(ecolor='darkblue', lw=1, capthick=1, capsize=5),
-                   color=colors)  # Use the blue color palette
+                   error_kw=dict(ecolor='#2F528F', lw=1, capthick=1, capsize=5),
+                   color=bar_color)
 
     plt.title(f'Histogram of Average {config["y"]} across Branches{title_suffix} on {config["modal"]}',
               fontsize=14, fontweight='bold')
     plt.xlabel("Branch", fontsize=12)
     plt.ylabel(config["y"], fontsize=12)
 
-    plt.xticks(range(num_bars), sorted_data['branch'], rotation=45, ha='right', fontsize=10)
+    plt.xticks(range(len(sorted_data)), sorted_data['branch'], rotation=45, ha='right', fontsize=10)
     plt.yticks(fontsize=10)
 
     # Add value labels on top of each bar
     for i, v in enumerate(sorted_data['mean']):
-        plt.text(i, v, f'{v:.2f}', ha='center', va='bottom', fontsize=9, fontweight='bold', color='darkblue')
+        plt.text(i, v, f'{v:.2f}', ha='center', va='bottom', fontsize=9, fontweight='bold', color='#2F528F')
 
     plt.tight_layout()
     filename = f"{config['title']}{title_suffix.replace(' ', '_')}.svg"
@@ -157,7 +156,7 @@ def plot_hist(data, config, output_dir, title_suffix=""):
     plt.savefig(filepath, bbox_inches='tight', dpi=300)
     print(f"Saved plot to {filepath}")
     plt.close()
-
+    
 def main():
     parser = argparse.ArgumentParser(description='Generate histogram from CSV files in directories.')
     parser.add_argument('directory', type=str, help='Root directory to search for CSV files')

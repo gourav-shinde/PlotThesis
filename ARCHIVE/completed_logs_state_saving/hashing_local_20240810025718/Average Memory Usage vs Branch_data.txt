@@ -1,0 +1,28 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder  State_Save_Period     branch   mean       sem
+         pcs-10k                  5     master  254.0  1.923538
+         pcs-10k                  5 HashingPOC  244.8  2.107131
+         pcs-10k                  8     master  227.8  1.655295
+         pcs-10k                  8 HashingPOC  260.6  1.469694
+         pcs-10k                 10     master  256.0  3.974921
+         pcs-10k                 10 HashingPOC  263.0  2.097618
+ epidemic-10k-ba                  5     master    NaN       NaN
+ epidemic-10k-ba                  5 HashingPOC    NaN       NaN
+ epidemic-10k-ba                  8     master 1145.0 34.865456
+ epidemic-10k-ba                  8 HashingPOC 1015.0 28.441167
+ epidemic-10k-ba                 10     master 1019.2 30.353583
+ epidemic-10k-ba                 10 HashingPOC 1109.6 54.791058
+     traffic-10k                  5     master  264.2  1.984943
+     traffic-10k                  5 HashingPOC  263.8  1.319091
+     traffic-10k                  8     master  231.2  1.772005
+     traffic-10k                  8 HashingPOC  232.4  1.805547
+     traffic-10k                 10     master  252.2  2.222611
+     traffic-10k                 10 HashingPOC  249.4  2.357965
+epidemic-100k-ba                  5     master 1139.8 30.462108
+epidemic-100k-ba                  5 HashingPOC 1157.6 18.145523
+epidemic-100k-ba                  8     master  826.0  9.219544
+epidemic-100k-ba                  8 HashingPOC  824.0  6.833740
+epidemic-100k-ba                 10     master  785.0 15.626900
+epidemic-100k-ba                 10 HashingPOC  751.8  7.800000
+

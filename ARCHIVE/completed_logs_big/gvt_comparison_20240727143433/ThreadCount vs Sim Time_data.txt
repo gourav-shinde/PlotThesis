@@ -1,0 +1,10 @@
+Data for plot: ThreadCount vs Sim Time
+
+ Worker_Thread_Count branch      mean       sem
+                   3 master 47.226480 10.929583
+                   3 SynGVT 47.727370 11.036329
+                   4 master 19.033527  2.676887
+                   4 SynGVT 19.183120  2.699454
+                   6 master 40.965670  9.397001
+                   6 SynGVT 41.488860  9.515471
+

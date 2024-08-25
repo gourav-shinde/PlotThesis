@@ -1,0 +1,13 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder         branch         mean         sem
+    epidemic-10k         master    68.928571   23.568107
+    epidemic-10k           SIMD    90.230769   20.779105
+    epidemic-10k relaxedCompare    38.294118    9.274714
+     traffic-10k         master  5884.100000 1240.857172
+     traffic-10k           SIMD 13182.100000 2229.958507
+     traffic-10k relaxedCompare    14.700000    4.878638
+epidemic-100k-ba         master     1.800000    0.757188
+epidemic-100k-ba           SIMD    11.700000    1.282792
+epidemic-100k-ba relaxedCompare     4.800000    2.249938
+

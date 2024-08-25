@@ -1,0 +1,2380 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.7.26)  13 AUG 2024 21:29
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**svg_collection.tex
+(./svg_collection.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip49
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen139
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count198
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks17
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks18
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen150
+\captionmargin@=\dimen151
+\captionwidth=\dimen152
+\caption@tempdima=\dimen153
+\caption@indent=\dimen154
+\caption@parindent=\dimen155
+\caption@hangindent=\dimen156
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count271
+\c@continuedfloat=\count272
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count273
+\c@subtable=\count274
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip53
+\f@nch@O@elh=\skip54
+\f@nch@O@erh=\skip55
+\f@nch@O@olh=\skip56
+\f@nch@O@orh=\skip57
+\f@nch@O@elf=\skip58
+\f@nch@O@erf=\skip59
+\f@nch@O@olf=\skip60
+\f@nch@O@orf=\skip61
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count275
+\float@exts=\toks22
+\float@box=\box52
+\@float@everytoks=\toks23
+\@floatcapt=\box53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen157
+\ar@mcellbox=\box54
+\extrarowheight=\dimen158
+\NC@list=\toks24
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box55
+)
+\TX@col@width=\dimen159
+\TX@old@table=\dimen160
+\TX@old@col=\dimen161
+\TX@target=\dimen162
+\TX@delta=\dimen163
+\TX@cols=\count276
+\TX@ftn=\toks25
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count277
+\Gm@cntv=\count278
+\c@Gm@tempcnt=\count279
+\Gm@bindingoffset=\dimen164
+\Gm@wd@mp=\dimen165
+\Gm@odd@mp=\dimen166
+\Gm@even@mp=\dimen167
+\Gm@layoutwidth=\dimen168
+\Gm@layoutheight=\dimen169
+\Gm@layouthoffset=\dimen170
+\Gm@layoutvoffset=\dimen171
+\Gm@dimlist=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen172
+\Hy@linkcounter=\count280
+\Hy@pagecounter=\count281
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count282
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count283
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen173
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count284
+\Field@Width=\dimen174
+\Fld@charsize=\dimen175
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count285
+\c@Item=\count286
+\c@Hfootnote=\count287
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count288
+\c@bookmark@seq@number=\count289
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip64
+)
+(/usr/share/texlive/texmf-dist/tex/latex/svg/svg.sty
+Package: svg 2020/11/26 v2.02k (include SVG pictures)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
+)))
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 368.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "svg_collection.w18")...executed.
+
+
+(./svg_collection.w18)
+runsystem(rm -- "svg_collection.w18")...executed.
+
+)
+\c@svg@param@lastpage=\count290
+\svg@box=\box56
+\c@svg@param@currpage=\count291
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+LaTeX Info: Redefining \color on input line 711.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/transparent/transparent.sty
+Package: transparent 2019/11/29 v1.4 Transparency via pdfTeX's color stack (HO)
+
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks27
+\pgfutil@tempdima=\dimen176
+\pgfutil@tempdimb=\dimen177
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box57
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks30
+))
+\pgf@x=\dimen178
+\pgf@y=\dimen179
+\pgf@xa=\dimen180
+\pgf@ya=\dimen181
+\pgf@xb=\dimen182
+\pgf@yb=\dimen183
+\pgf@xc=\dimen184
+\pgf@yc=\dimen185
+\pgf@xd=\dimen186
+\pgf@yd=\dimen187
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count292
+\c@pgf@countb=\count293
+\c@pgf@countc=\count294
+\c@pgf@countd=\count295
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
+\pgf@sys@id@count=\count296
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count297
+\pgfsyssoftpath@bigbuffer@items=\count298
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 16.
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count299
+\l__pdf_internal_box=\box58
+)
+(./svg_collection.aux)
+\openout1 = `svg_collection.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count300
+\scratchdimen=\dimen188
+\scratchbox=\box59
+\nofMPsegments=\count301
+\nofMParguments=\count302
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen189
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
+\everyMPtoPDFconversion=\toks35
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=0.0pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring ON on input line 22.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count306
+)
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \nameref on input line 22.
+
+(./svg_collection.out) (./svg_collection.out)
+\@outlinefile=\write4
+\openout4 = `svg_collection.out'.
+
+ (./svg_collection.toc [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+\tf@toc=\write5
+\openout5 = `svg_collection.toc'.
+
+ [2] (./svg_content.texpdfTeX warning (ext4): destination with the same identif
+ier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 
+      [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.60     \item R
+                equires contiguous memory allocation for members of the Even...
+[2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\OT1/cmr/bx/n/9 Max Sim
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\OT1/cmr/bx/n/9 Worker
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\OT1/cmr/bx/n/9 GVT Pe-
+ []
+
+[5]
+Package svg Info: Last page of `./svg-inkscape/ac0af258_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 152.
+ (./svg-inkscape/ac0af258_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/ac0af258_Average Memory Usage vs Branch_svg-tex.pdf, id=204, pa
+ge=1, 1440.59187pt x 715.6792pt>
+File: ./svg-inkscape/ac0af258_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/ac0af258_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/ac0af258_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.0315pt.
+)
+Package svg Info: Last page of `./svg-inkscape/7bcf53de_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 158.
+
+(./svg-inkscape/7bcf53de_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/7bcf53de_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=206, page=1, 1441.06924pt x 715.6792pt>
+File: ./svg-inkscape/7bcf53de_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/7bcf53de_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/7bcf53de_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.95505pt.
+) [6 <./svg-inkscape/ac0af258_Average Memory Usage vs Branch_svg-tex.pdf> <./sv
+g-inkscape/7bcf53de_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/7bcf53de_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/6bbf93b7_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 165.
+ (./svg-inkscape/6bbf93b7_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/6bbf93b7_Branch vs Primary Rollback_svg-tex.pdf, id=377, page=1
+, 1440.09172pt x 715.6792pt>
+File: ./svg-inkscape/6bbf93b7_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/6bbf93b7_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/6bbf93b7_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.10794pt.
+)
+Package svg Info: Last page of `./svg-inkscape/991d8312_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 171.
+
+(./svg-inkscape/991d8312_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/991d8312_Branch vs Primary Rollback_log_svg-tex.pdf, id=379, pa
+ge=1, 1440.40564pt x 715.6792pt>
+File: ./svg-inkscape/991d8312_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/991d8312_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/991d8312_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.06425pt.
+)
+[7 <./svg-inkscape/6bbf93b7_Branch vs Primary Rollback_svg-tex.pdf> <./svg-inks
+cape/991d8312_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/991d8312_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/b22f56da_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 178.
+
+(./svg-inkscape/b22f56da_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/b22f56da_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+583, page=1, 1441.06924pt x 715.6792pt>
+File: ./svg-inkscape/b22f56da_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/b22f56da_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/b22f56da_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.95505pt.
+)
+Package svg Info: Last page of `./svg-inkscape/92a5bd91_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 184.
+(./svg-inkscape/92a5bd91_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/92a5bd91_Branch vs Simulation Time_svg-tex.pdf, id=585, page=1,
+ 1440.89612pt x 715.6792pt>
+File: ./svg-inkscape/92a5bd91_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/92a5bd91_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/92a5bd91_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.98781pt.
+) [8 <./svg-inkscape/b22f56da_Branch vs Primary Rollback_normalized_svg-tex.pdf
+> <./svg-inkscape/92a5bd91_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/92a5bd91_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/234e2174_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 191.
+
+(./svg-inkscape/234e2174_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/234e2174_Branch vs Simulation Time_normalized_svg-tex.pdf, id=7
+53, page=1, 1441.06924pt x 715.6792pt>
+File: ./svg-inkscape/234e2174_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/234e2174_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/234e2174_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.95505pt.
+)
+Package svg Info: Last page of `./svg-inkscape/8648f61b_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 197.
+
+(./svg-inkscape/8648f61b_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/8648f61b_ThreadCount vs Sim Time_svg-tex.pdf, id=755, page=1, 1
+441.25096pt x 715.54602pt>
+File: ./svg-inkscape/8648f61b_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/8648f61b_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/8648f61b_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.89415pt.
+) [9 <./svg-inkscape/234e2174_Branch vs Simulation Time_normalized_svg-tex.pdf>
+ <./svg-inkscape/8648f61b_ThreadCount vs Sim Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/8648f61b_ThreadCount vs Sim Time_
+svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+Package svg Info: Last page of `./svg-inkscape/72d85a8c_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 204.
+ (./svg-inkscape/72d85a8c_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/72d85a8c_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=893
+, page=1, 1441.06924pt x 715.54602pt>
+File: ./svg-inkscape/72d85a8c_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/72d85a8c_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/72d85a8c_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.91599pt.
+) [10 <./svg-inkscape/72d85a8c_ThreadCount vs Sim Time_normalized_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/186b0a14_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 213.
+
+(./svg-inkscape/186b0a14_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/186b0a14_Average Memory Usage vs Branch_svg-tex.pdf, id=942, pa
+ge=1, 1440.6867pt x 715.6792pt>
+File: ./svg-inkscape/186b0a14_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/186b0a14_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/186b0a14_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.02057pt.
+)
+Package svg Info: Last page of `./svg-inkscape/6420ea71_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 219.
+
+(./svg-inkscape/6420ea71_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/6420ea71_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=944, page=1, 1441.06924pt x 715.6792pt>
+File: ./svg-inkscape/6420ea71_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/6420ea71_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/6420ea71_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.95505pt.
+) [11 <./svg-inkscape/186b0a14_Average Memory Usage vs Branch_svg-tex.pdf> <./s
+vg-inkscape/6420ea71_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/6420ea71_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/66906352_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 226.
+ (./svg-inkscape/66906352_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/66906352_Branch vs Primary Rollback_svg-tex.pdf, id=1107, page=
+1, 1440.09172pt x 715.6792pt>
+File: ./svg-inkscape/66906352_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/66906352_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/66906352_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.10794pt.
+)
+Package svg Info: Last page of `./svg-inkscape/6d3e3c37_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 232.
+
+(./svg-inkscape/6d3e3c37_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/6d3e3c37_Branch vs Primary Rollback_log_svg-tex.pdf, id=1109, p
+age=1, 1440.44974pt x 715.6792pt>
+File: ./svg-inkscape/6d3e3c37_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/6d3e3c37_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/6d3e3c37_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.05333pt.
+)
+[12 <./svg-inkscape/66906352_Branch vs Primary Rollback_svg-tex.pdf> <./svg-ink
+scape/6d3e3c37_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/6d3e3c37_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/b44b0a5f_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 239.
+
+(./svg-inkscape/b44b0a5f_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/b44b0a5f_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+1313, page=1, 1441.06924pt x 715.6792pt>
+File: ./svg-inkscape/b44b0a5f_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/b44b0a5f_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/b44b0a5f_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.95505pt.
+)
+Package svg Info: Last page of `./svg-inkscape/6dce1888_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 245.
+(./svg-inkscape/6dce1888_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/6dce1888_Branch vs Simulation Time_svg-tex.pdf, id=1315, page=1
+, 1440.89612pt x 715.6792pt>
+File: ./svg-inkscape/6dce1888_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/6dce1888_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/6dce1888_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.98781pt.
+) [13 <./svg-inkscape/b44b0a5f_Branch vs Primary Rollback_normalized_svg-tex.pd
+f> <./svg-inkscape/6dce1888_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/6dce1888_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/2806a643_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 252.
+
+(./svg-inkscape/2806a643_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/2806a643_Branch vs Simulation Time_normalized_svg-tex.pdf, id=1
+480, page=1, 1441.06924pt x 715.6792pt>
+File: ./svg-inkscape/2806a643_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/2806a643_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/2806a643_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.95505pt.
+)
+Package svg Info: Last page of `./svg-inkscape/c343c88b_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 258.
+
+(./svg-inkscape/c343c88b_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/c343c88b_ThreadCount vs Sim Time_svg-tex.pdf, id=1482, page=1, 
+1441.25096pt x 715.54602pt>
+File: ./svg-inkscape/c343c88b_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/c343c88b_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/c343c88b_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.89415pt.
+) [14 <./svg-inkscape/2806a643_Branch vs Simulation Time_normalized_svg-tex.pdf
+> <./svg-inkscape/c343c88b_ThreadCount vs Sim Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/c343c88b_ThreadCount vs Sim Time_
+svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+Package svg Info: Last page of `./svg-inkscape/ad96687b_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 265.
+ (./svg-inkscape/ad96687b_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/ad96687b_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=161
+7, page=1, 1441.06924pt x 715.54602pt>
+File: ./svg-inkscape/ad96687b_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/ad96687b_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/ad96687b_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.91599pt.
+) [15 <./svg-inkscape/ad96687b_ThreadCount vs Sim Time_normalized_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/0d7e91f3_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 274.
+
+(./svg-inkscape/0d7e91f3_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/0d7e91f3_Average Memory Usage vs Branch_svg-tex.pdf, id=1665, p
+age=1, 1442.59999pt x 715.6792pt>
+File: ./svg-inkscape/0d7e91f3_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/0d7e91f3_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/0d7e91f3_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.73663pt.
+)
+Package svg Info: Last page of `./svg-inkscape/22b0a4e8_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 280.
+
+(./svg-inkscape/22b0a4e8_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/22b0a4e8_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=1667, page=1, 1443.1722pt x 715.6792pt>
+File: ./svg-inkscape/22b0a4e8_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/22b0a4e8_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/22b0a4e8_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.64928pt.
+) [16 <./svg-inkscape/0d7e91f3_Average Memory Usage vs Branch_svg-tex.pdf> <./s
+vg-inkscape/22b0a4e8_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/22b0a4e8_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/565b32fb_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 287.
+ (./svg-inkscape/565b32fb_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/565b32fb_Branch vs Primary Rollback_svg-tex.pdf, id=1836, page=
+1, 1442.19467pt x 715.6792pt>
+File: ./svg-inkscape/565b32fb_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/565b32fb_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/565b32fb_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.79124pt.
+)
+Package svg Info: Last page of `./svg-inkscape/05923520_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 293.
+
+(./svg-inkscape/05923520_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/05923520_Branch vs Primary Rollback_log_svg-tex.pdf, id=1838, p
+age=1, 1442.5087pt x 715.6792pt>
+File: ./svg-inkscape/05923520_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/05923520_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/05923520_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.74756pt.
+)
+[17 <./svg-inkscape/565b32fb_Branch vs Primary Rollback_svg-tex.pdf> <./svg-ink
+scape/05923520_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/05923520_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/62ff0b05_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 300.
+
+(./svg-inkscape/62ff0b05_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/62ff0b05_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+2043, page=1, 1443.1722pt x 715.6792pt>
+File: ./svg-inkscape/62ff0b05_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/62ff0b05_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/62ff0b05_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.64928pt.
+)
+Package svg Info: Last page of `./svg-inkscape/a7799f48_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 306.
+(./svg-inkscape/a7799f48_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/a7799f48_Branch vs Simulation Time_svg-tex.pdf, id=2045, page=1
+, 1442.99919pt x 715.6792pt>
+File: ./svg-inkscape/a7799f48_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/a7799f48_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/a7799f48_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.68204pt.
+) [18 <./svg-inkscape/62ff0b05_Branch vs Primary Rollback_normalized_svg-tex.pd
+f> <./svg-inkscape/a7799f48_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/a7799f48_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/23600081_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 313.
+
+(./svg-inkscape/23600081_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/23600081_Branch vs Simulation Time_normalized_svg-tex.pdf, id=2
+210, page=1, 1443.1722pt x 715.6792pt>
+File: ./svg-inkscape/23600081_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/23600081_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/23600081_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.64928pt.
+)
+Package svg Info: Last page of `./svg-inkscape/5ebb1d8c_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 319.
+
+(./svg-inkscape/5ebb1d8c_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/5ebb1d8c_ThreadCount vs Sim Time_svg-tex.pdf, id=2212, page=1, 
+1443.35402pt x 715.54602pt>
+File: ./svg-inkscape/5ebb1d8c_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/5ebb1d8c_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/5ebb1d8c_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.58844pt.
+) [19 <./svg-inkscape/23600081_Branch vs Simulation Time_normalized_svg-tex.pdf
+> <./svg-inkscape/5ebb1d8c_ThreadCount vs Sim Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/5ebb1d8c_ThreadCount vs Sim Time_
+svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+Package svg Info: Last page of `./svg-inkscape/6d244d8d_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 326.
+ (./svg-inkscape/6d244d8d_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/6d244d8d_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=236
+2, page=1, 1443.1722pt x 715.54602pt>
+File: ./svg-inkscape/6d244d8d_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/6d244d8d_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/6d244d8d_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.61028pt.
+) [20 <./svg-inkscape/6d244d8d_ThreadCount vs Sim Time_normalized_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/d76b30ff_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 335.
+
+(./svg-inkscape/d76b30ff_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/d76b30ff_Average Memory Usage vs Branch_svg-tex.pdf, id=2419, p
+age=1, 1442.78978pt x 715.6792pt>
+File: ./svg-inkscape/d76b30ff_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/d76b30ff_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/d76b30ff_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.70387pt.
+)
+Package svg Info: Last page of `./svg-inkscape/14b6e8aa_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 341.
+
+(./svg-inkscape/14b6e8aa_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/14b6e8aa_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=2421, page=1, 1443.1722pt x 715.6792pt>
+File: ./svg-inkscape/14b6e8aa_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/14b6e8aa_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/14b6e8aa_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.64928pt.
+) [21 <./svg-inkscape/d76b30ff_Average Memory Usage vs Branch_svg-tex.pdf> <./s
+vg-inkscape/14b6e8aa_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/14b6e8aa_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/f4f1940b_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 348.
+ (./svg-inkscape/f4f1940b_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/f4f1940b_Branch vs Primary Rollback_svg-tex.pdf, id=2584, page=
+1, 1442.28963pt x 715.6792pt>
+File: ./svg-inkscape/f4f1940b_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/f4f1940b_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/f4f1940b_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.78032pt.
+)
+Package svg Info: Last page of `./svg-inkscape/446458de_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 354.
+
+(./svg-inkscape/446458de_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/446458de_Branch vs Primary Rollback_log_svg-tex.pdf, id=2586, p
+age=1, 1442.55281pt x 715.6792pt>
+File: ./svg-inkscape/446458de_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/446458de_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/446458de_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.74756pt.
+)
+[22 <./svg-inkscape/f4f1940b_Branch vs Primary Rollback_svg-tex.pdf> <./svg-ink
+scape/446458de_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/446458de_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/8f25a6a5_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 361.
+
+(./svg-inkscape/8f25a6a5_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/8f25a6a5_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+2781, page=1, 1443.1722pt x 715.6792pt>
+File: ./svg-inkscape/8f25a6a5_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/8f25a6a5_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/8f25a6a5_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.64928pt.
+)
+Package svg Info: Last page of `./svg-inkscape/38f09ffd_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 367.
+(./svg-inkscape/38f09ffd_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/38f09ffd_Branch vs Simulation Time_svg-tex.pdf, id=2783, page=1
+, 1443.09402pt x 715.6792pt>
+File: ./svg-inkscape/38f09ffd_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/38f09ffd_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/38f09ffd_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.67111pt.
+) [23 <./svg-inkscape/8f25a6a5_Branch vs Primary Rollback_normalized_svg-tex.pd
+f> <./svg-inkscape/38f09ffd_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/38f09ffd_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/73c3ee79_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 374.
+
+(./svg-inkscape/73c3ee79_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/73c3ee79_Branch vs Simulation Time_normalized_svg-tex.pdf, id=2
+946, page=1, 1443.1722pt x 715.6792pt>
+File: ./svg-inkscape/73c3ee79_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/73c3ee79_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/73c3ee79_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.64928pt.
+)
+Package svg Info: Last page of `./svg-inkscape/3a895e17_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 380.
+
+(./svg-inkscape/3a895e17_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/3a895e17_ThreadCount vs Sim Time_svg-tex.pdf, id=2948, page=1, 
+1443.35402pt x 715.54602pt>
+File: ./svg-inkscape/3a895e17_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/3a895e17_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/3a895e17_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.58844pt.
+) [24 <./svg-inkscape/73c3ee79_Branch vs Simulation Time_normalized_svg-tex.pdf
+> <./svg-inkscape/3a895e17_ThreadCount vs Sim Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/3a895e17_ThreadCount vs Sim Time_
+svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+Package svg Info: Last page of `./svg-inkscape/8c4f80ed_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 387.
+ (./svg-inkscape/8c4f80ed_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/8c4f80ed_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=309
+5, page=1, 1443.1722pt x 715.54602pt>
+File: ./svg-inkscape/8c4f80ed_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/8c4f80ed_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/8c4f80ed_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.61028pt.
+) [25 <./svg-inkscape/8c4f80ed_ThreadCount vs Sim Time_normalized_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/2939f413_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 396.
+
+(./svg-inkscape/2939f413_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/2939f413_Average Memory Usage vs Branch_svg-tex.pdf, id=3152, p
+age=1, 1441.3208pt x 715.6792pt>
+File: ./svg-inkscape/2939f413_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/2939f413_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/2939f413_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.92229pt.
+)
+Package svg Info: Last page of `./svg-inkscape/b4991e2d_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 402.
+
+(./svg-inkscape/b4991e2d_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/b4991e2d_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=3154, page=1, 1441.893pt x 715.6792pt>
+File: ./svg-inkscape/b4991e2d_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/b4991e2d_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/b4991e2d_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.84584pt.
+) [26 <./svg-inkscape/2939f413_Average Memory Usage vs Branch_svg-tex.pdf> <./s
+vg-inkscape/b4991e2d_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/b4991e2d_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/db8bc7ee_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 409.
+ (./svg-inkscape/db8bc7ee_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/db8bc7ee_Branch vs Primary Rollback_svg-tex.pdf, id=3313, page=
+1, 1440.91547pt x 715.6792pt>
+File: ./svg-inkscape/db8bc7ee_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/db8bc7ee_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/db8bc7ee_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.97688pt.
+)
+Package svg Info: Last page of `./svg-inkscape/a8fa0ebc_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 415.
+
+(./svg-inkscape/a8fa0ebc_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/a8fa0ebc_Branch vs Primary Rollback_log_svg-tex.pdf, id=3315, p
+age=1, 1440.72763pt x 715.6792pt>
+File: ./svg-inkscape/a8fa0ebc_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/a8fa0ebc_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/a8fa0ebc_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.00964pt.
+)
+[27 <./svg-inkscape/db8bc7ee_Branch vs Primary Rollback_svg-tex.pdf> <./svg-ink
+scape/a8fa0ebc_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/a8fa0ebc_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/7a339584_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 422.
+
+(./svg-inkscape/7a339584_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/7a339584_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+3514, page=1, 1441.893pt x 715.6792pt>
+File: ./svg-inkscape/7a339584_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/7a339584_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/7a339584_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.84584pt.
+)
+Package svg Info: Last page of `./svg-inkscape/b0e1d41f_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 428.
+(./svg-inkscape/b0e1d41f_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/b0e1d41f_Branch vs Simulation Time_svg-tex.pdf, id=3516, page=1
+, 1441.71999pt x 715.6792pt>
+File: ./svg-inkscape/b0e1d41f_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/b0e1d41f_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/b0e1d41f_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.86769pt.
+) [28 <./svg-inkscape/7a339584_Branch vs Primary Rollback_normalized_svg-tex.pd
+f> <./svg-inkscape/b0e1d41f_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/b0e1d41f_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/4b954d7b_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 435.
+
+(./svg-inkscape/4b954d7b_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/4b954d7b_Branch vs Simulation Time_normalized_svg-tex.pdf, id=3
+672, page=1, 1441.893pt x 715.6792pt>
+File: ./svg-inkscape/4b954d7b_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/4b954d7b_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/4b954d7b_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.84584pt.
+)
+Package svg Info: Last page of `./svg-inkscape/257407d5_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 441.
+
+(./svg-inkscape/257407d5_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/257407d5_ThreadCount vs Sim Time_svg-tex.pdf, id=3674, page=1, 
+1442.07483pt x 715.54602pt>
+File: ./svg-inkscape/257407d5_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/257407d5_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/257407d5_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.77405pt.
+) [29 <./svg-inkscape/4b954d7b_Branch vs Simulation Time_normalized_svg-tex.pdf
+> <./svg-inkscape/257407d5_ThreadCount vs Sim Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/257407d5_ThreadCount vs Sim Time_
+svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+Package svg Info: Last page of `./svg-inkscape/bbbdfda9_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 448.
+ (./svg-inkscape/bbbdfda9_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/bbbdfda9_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=381
+0, page=1, 1441.893pt x 715.54602pt>
+File: ./svg-inkscape/bbbdfda9_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/bbbdfda9_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/bbbdfda9_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.8068pt.
+) [30 <./svg-inkscape/bbbdfda9_ThreadCount vs Sim Time_normalized_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/1c233fea_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 457.
+
+(./svg-inkscape/1c233fea_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/1c233fea_Average Memory Usage vs Branch_svg-tex.pdf, id=3858, p
+age=1, 1441.7973pt x 715.6792pt>
+File: ./svg-inkscape/1c233fea_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/1c233fea_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/1c233fea_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.85677pt.
+)
+Package svg Info: Last page of `./svg-inkscape/09fb4e84_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 463.
+
+(./svg-inkscape/09fb4e84_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/09fb4e84_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=3860, page=1, 1441.893pt x 715.6792pt>
+File: ./svg-inkscape/09fb4e84_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/09fb4e84_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/09fb4e84_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.84584pt.
+) [31 <./svg-inkscape/1c233fea_Average Memory Usage vs Branch_svg-tex.pdf> <./s
+vg-inkscape/09fb4e84_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/09fb4e84_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/274f4cdd_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 470.
+ (./svg-inkscape/274f4cdd_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/274f4cdd_Branch vs Primary Rollback_svg-tex.pdf, id=4019, page=
+1, 1440.65547pt x 715.6792pt>
+File: ./svg-inkscape/274f4cdd_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/274f4cdd_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/274f4cdd_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.02057pt.
+)
+Package svg Info: Last page of `./svg-inkscape/f7b5f89e_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 476.
+
+(./svg-inkscape/f7b5f89e_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/f7b5f89e_Branch vs Primary Rollback_log_svg-tex.pdf, id=4021, p
+age=1, 1441.27362pt x 715.6792pt>
+File: ./svg-inkscape/f7b5f89e_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/f7b5f89e_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/f7b5f89e_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.93321pt.
+)
+[32 <./svg-inkscape/274f4cdd_Branch vs Primary Rollback_svg-tex.pdf> <./svg-ink
+scape/f7b5f89e_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/f7b5f89e_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/6a804473_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 483.
+
+(./svg-inkscape/6a804473_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/6a804473_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+4219, page=1, 1441.893pt x 715.6792pt>
+File: ./svg-inkscape/6a804473_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/6a804473_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/6a804473_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.84584pt.
+)
+Package svg Info: Last page of `./svg-inkscape/44f1798e_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 489.
+(./svg-inkscape/44f1798e_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/44f1798e_Branch vs Simulation Time_svg-tex.pdf, id=4221, page=1
+, 1441.81483pt x 715.6792pt>
+File: ./svg-inkscape/44f1798e_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/44f1798e_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/44f1798e_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.85677pt.
+) [33 <./svg-inkscape/6a804473_Branch vs Primary Rollback_normalized_svg-tex.pd
+f> <./svg-inkscape/44f1798e_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/44f1798e_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/01759f92_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 496.
+
+(./svg-inkscape/01759f92_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/01759f92_Branch vs Simulation Time_normalized_svg-tex.pdf, id=4
+383, page=1, 1441.893pt x 715.6792pt>
+File: ./svg-inkscape/01759f92_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/01759f92_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/01759f92_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.84584pt.
+)
+Package svg Info: Last page of `./svg-inkscape/925120df_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 502.
+
+(./svg-inkscape/925120df_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/925120df_ThreadCount vs Sim Time_svg-tex.pdf, id=4385, page=1, 
+1442.07483pt x 715.54602pt>
+File: ./svg-inkscape/925120df_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/925120df_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/925120df_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.77405pt.
+) [34 <./svg-inkscape/01759f92_Branch vs Simulation Time_normalized_svg-tex.pdf
+> <./svg-inkscape/925120df_ThreadCount vs Sim Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/925120df_ThreadCount vs Sim Time_
+svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+Package svg Info: Last page of `./svg-inkscape/b9436bd7_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 509.
+ (./svg-inkscape/b9436bd7_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/b9436bd7_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=451
+7, page=1, 1441.893pt x 715.54602pt>
+File: ./svg-inkscape/b9436bd7_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/b9436bd7_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/b9436bd7_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 209.8068pt.
+) [35 <./svg-inkscape/b9436bd7_ThreadCount vs Sim Time_normalized_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/2b2ed9e0_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 518.
+
+(./svg-inkscape/2b2ed9e0_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/2b2ed9e0_Average Memory Usage vs Branch_svg-tex.pdf, id=4567, p
+age=1, 1439.34245pt x 715.6792pt>
+File: ./svg-inkscape/2b2ed9e0_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/2b2ed9e0_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/2b2ed9e0_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.21713pt.
+)
+Package svg Info: Last page of `./svg-inkscape/9027776e_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 524.
+
+(./svg-inkscape/9027776e_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/9027776e_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=4569, page=1, 1439.81982pt x 715.6792pt>
+File: ./svg-inkscape/9027776e_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/9027776e_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/9027776e_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1407pt.
+) [36 <./svg-inkscape/2b2ed9e0_Average Memory Usage vs Branch_svg-tex.pdf> <./s
+vg-inkscape/9027776e_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/9027776e_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/95845e84_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 531.
+ (./svg-inkscape/95845e84_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/95845e84_Branch vs Primary Rollback_svg-tex.pdf, id=4740, page=
+1, 1438.8423pt x 715.6792pt>
+File: ./svg-inkscape/95845e84_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/95845e84_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/95845e84_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.28265pt.
+)
+Package svg Info: Last page of `./svg-inkscape/6cfaa956_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 537.
+
+(./svg-inkscape/6cfaa956_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/6cfaa956_Branch vs Primary Rollback_log_svg-tex.pdf, id=4742, p
+age=1, 1439.15634pt x 715.6792pt>
+File: ./svg-inkscape/6cfaa956_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/6cfaa956_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/6cfaa956_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.23898pt.
+)
+[37 <./svg-inkscape/95845e84_Branch vs Primary Rollback_svg-tex.pdf> <./svg-ink
+scape/6cfaa956_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/6cfaa956_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/4d6e5949_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 544.
+
+(./svg-inkscape/4d6e5949_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/4d6e5949_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+4946, page=1, 1439.81982pt x 715.6792pt>
+File: ./svg-inkscape/4d6e5949_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/4d6e5949_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/4d6e5949_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1407pt.
+)
+Package svg Info: Last page of `./svg-inkscape/f0f8e74c_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 550.
+(./svg-inkscape/f0f8e74c_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/f0f8e74c_Branch vs Simulation Time_svg-tex.pdf, id=4948, page=1
+, 1439.64682pt x 715.6792pt>
+File: ./svg-inkscape/f0f8e74c_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/f0f8e74c_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/f0f8e74c_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.17346pt.
+) [38 <./svg-inkscape/4d6e5949_Branch vs Primary Rollback_normalized_svg-tex.pd
+f> <./svg-inkscape/f0f8e74c_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/f0f8e74c_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/7e70d70f_Branch vs Simulation Ti
+me_log_svg-tex.pdf' is 1 on input line 557.
+ (./svg-inkscape/7e70d70f_Branch vs Simulation Time_log_svg-tex.pdf_tex
+<./svg-inkscape/7e70d70f_Branch vs Simulation Time_log_svg-tex.pdf, id=5116, pa
+ge=1, 1439.74165pt x 715.6792pt>
+File: ./svg-inkscape/7e70d70f_Branch vs Simulation Time_log_svg-tex.pdf Graphic
+ file (type pdf)
+<use ./svg-inkscape/7e70d70f_Branch vs Simulation Time_log_svg-tex.pdf, page 1>
+
+Package pdftex.def Info: ./svg-inkscape/7e70d70f_Branch vs Simulation Time_log_
+svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.15161pt.
+)
+Package svg Info: Last page of `./svg-inkscape/2f27291a_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 563.
+
+(./svg-inkscape/2f27291a_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/2f27291a_Branch vs Simulation Time_normalized_svg-tex.pdf, id=5
+118, page=1, 1439.81982pt x 715.6792pt>
+File: ./svg-inkscape/2f27291a_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/2f27291a_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/2f27291a_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1407pt.
+)
+[39 <./svg-inkscape/7e70d70f_Branch vs Simulation Time_log_svg-tex.pdf> <./svg-
+inkscape/2f27291a_Branch vs Simulation Time_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/2f27291a_Branch vs Simulation Tim
+e_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group include
+d in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/9cb5729f_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 570.
+ (./svg-inkscape/9cb5729f_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/9cb5729f_ThreadCount vs Sim Time_svg-tex.pdf, id=5274, page=1, 
+1440.00166pt x 715.54602pt>
+File: ./svg-inkscape/9cb5729f_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/9cb5729f_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/9cb5729f_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.07976pt.
+)
+Package svg Info: Last page of `./svg-inkscape/db96465b_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 576.
+
+(./svg-inkscape/db96465b_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/db96465b_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=527
+6, page=1, 1439.81982pt x 715.54602pt>
+File: ./svg-inkscape/db96465b_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/db96465b_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/db96465b_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1016pt.
+)
+[40 <./svg-inkscape/9cb5729f_ThreadCount vs Sim Time_svg-tex.pdf> <./svg-inksca
+pe/db96465b_ThreadCount vs Sim Time_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/db96465b_ThreadCount vs Sim Time_
+normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included 
+in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/b95c9bf2_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 585.
+ (./svg-inkscape/b95c9bf2_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/b95c9bf2_Average Memory Usage vs Branch_svg-tex.pdf, id=5396, p
+age=1, 1439.43729pt x 715.6792pt>
+File: ./svg-inkscape/b95c9bf2_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/b95c9bf2_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/b95c9bf2_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1953pt.
+)
+Package svg Info: Last page of `./svg-inkscape/70f12a44_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 591.
+
+(./svg-inkscape/70f12a44_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/70f12a44_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=5398, page=1, 1439.81982pt x 715.6792pt>
+File: ./svg-inkscape/70f12a44_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/70f12a44_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/70f12a44_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1407pt.
+) [41 <./svg-inkscape/b95c9bf2_Average Memory Usage vs Branch_svg-tex.pdf> <./s
+vg-inkscape/70f12a44_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/70f12a44_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/035729a1_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 598.
+ (./svg-inkscape/035729a1_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/035729a1_Branch vs Primary Rollback_svg-tex.pdf, id=5561, page=
+1, 1438.8423pt x 715.6792pt>
+File: ./svg-inkscape/035729a1_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/035729a1_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/035729a1_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.28265pt.
+)
+Package svg Info: Last page of `./svg-inkscape/965a6420_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 604.
+
+(./svg-inkscape/965a6420_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/965a6420_Branch vs Primary Rollback_log_svg-tex.pdf, id=5563, p
+age=1, 1439.20044pt x 715.6792pt>
+File: ./svg-inkscape/965a6420_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/965a6420_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/965a6420_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.22806pt.
+)
+[42 <./svg-inkscape/035729a1_Branch vs Primary Rollback_svg-tex.pdf> <./svg-ink
+scape/965a6420_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/965a6420_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/a706a3db_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 611.
+
+(./svg-inkscape/a706a3db_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/a706a3db_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+5765, page=1, 1439.81982pt x 715.6792pt>
+File: ./svg-inkscape/a706a3db_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/a706a3db_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/a706a3db_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1407pt.
+)
+Package svg Info: Last page of `./svg-inkscape/e3ceebd1_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 617.
+(./svg-inkscape/e3ceebd1_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/e3ceebd1_Branch vs Simulation Time_svg-tex.pdf, id=5767, page=1
+, 1439.64682pt x 715.6792pt>
+File: ./svg-inkscape/e3ceebd1_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/e3ceebd1_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/e3ceebd1_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.17346pt.
+) [43 <./svg-inkscape/a706a3db_Branch vs Primary Rollback_normalized_svg-tex.pd
+f> <./svg-inkscape/e3ceebd1_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/e3ceebd1_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/35a3b0f0_Branch vs Simulation Ti
+me_log_svg-tex.pdf' is 1 on input line 624.
+ (./svg-inkscape/35a3b0f0_Branch vs Simulation Time_log_svg-tex.pdf_tex
+<./svg-inkscape/35a3b0f0_Branch vs Simulation Time_log_svg-tex.pdf, id=5932, pa
+ge=1, 1439.74165pt x 715.6792pt>
+File: ./svg-inkscape/35a3b0f0_Branch vs Simulation Time_log_svg-tex.pdf Graphic
+ file (type pdf)
+<use ./svg-inkscape/35a3b0f0_Branch vs Simulation Time_log_svg-tex.pdf, page 1>
+
+Package pdftex.def Info: ./svg-inkscape/35a3b0f0_Branch vs Simulation Time_log_
+svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.15161pt.
+)
+Package svg Info: Last page of `./svg-inkscape/34e8ae43_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 630.
+
+(./svg-inkscape/34e8ae43_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/34e8ae43_Branch vs Simulation Time_normalized_svg-tex.pdf, id=5
+934, page=1, 1439.81982pt x 715.6792pt>
+File: ./svg-inkscape/34e8ae43_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/34e8ae43_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/34e8ae43_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1407pt.
+)
+[44 <./svg-inkscape/35a3b0f0_Branch vs Simulation Time_log_svg-tex.pdf> <./svg-
+inkscape/34e8ae43_Branch vs Simulation Time_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/34e8ae43_Branch vs Simulation Tim
+e_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group include
+d in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/61e1673e_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 637.
+ (./svg-inkscape/61e1673e_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/61e1673e_ThreadCount vs Sim Time_svg-tex.pdf, id=6090, page=1, 
+1440.00166pt x 715.54602pt>
+File: ./svg-inkscape/61e1673e_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/61e1673e_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/61e1673e_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.07976pt.
+)
+Package svg Info: Last page of `./svg-inkscape/5fb02f1d_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 643.
+
+(./svg-inkscape/5fb02f1d_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/5fb02f1d_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=609
+2, page=1, 1439.81982pt x 715.54602pt>
+File: ./svg-inkscape/5fb02f1d_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/5fb02f1d_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/5fb02f1d_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1016pt.
+)
+[45 <./svg-inkscape/61e1673e_ThreadCount vs Sim Time_svg-tex.pdf> <./svg-inksca
+pe/5fb02f1d_ThreadCount vs Sim Time_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/5fb02f1d_ThreadCount vs Sim Time_
+normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included 
+in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/8f80b1c1_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 652.
+ (./svg-inkscape/8f80b1c1_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/8f80b1c1_Average Memory Usage vs Branch_svg-tex.pdf, id=6208, p
+age=1, 1439.43729pt x 715.6792pt>
+File: ./svg-inkscape/8f80b1c1_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/8f80b1c1_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/8f80b1c1_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1953pt.
+)
+Package svg Info: Last page of `./svg-inkscape/3a7b92c9_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 658.
+
+(./svg-inkscape/3a7b92c9_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/3a7b92c9_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=6210, page=1, 1439.81982pt x 715.6792pt>
+File: ./svg-inkscape/3a7b92c9_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/3a7b92c9_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/3a7b92c9_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1407pt.
+) [46 <./svg-inkscape/8f80b1c1_Average Memory Usage vs Branch_svg-tex.pdf> <./s
+vg-inkscape/3a7b92c9_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/3a7b92c9_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/779962c3_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 665.
+ (./svg-inkscape/779962c3_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/779962c3_Branch vs Primary Rollback_svg-tex.pdf, id=6382, page=
+1, 1438.93713pt x 715.6792pt>
+File: ./svg-inkscape/779962c3_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/779962c3_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/779962c3_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.27174pt.
+)
+Package svg Info: Last page of `./svg-inkscape/5ec5a3ce_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 671.
+
+(./svg-inkscape/5ec5a3ce_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/5ec5a3ce_Branch vs Primary Rollback_log_svg-tex.pdf, id=6384, p
+age=1, 1439.15634pt x 715.6792pt>
+File: ./svg-inkscape/5ec5a3ce_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/5ec5a3ce_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/5ec5a3ce_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.23898pt.
+)
+[47 <./svg-inkscape/779962c3_Branch vs Primary Rollback_svg-tex.pdf> <./svg-ink
+scape/5ec5a3ce_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/5ec5a3ce_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/810f4201_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 678.
+
+(./svg-inkscape/810f4201_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/810f4201_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+6613, page=1, 1439.81982pt x 715.6792pt>
+File: ./svg-inkscape/810f4201_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/810f4201_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/810f4201_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1407pt.
+)
+Package svg Info: Last page of `./svg-inkscape/9c2d6095_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 684.
+(./svg-inkscape/9c2d6095_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/9c2d6095_Branch vs Simulation Time_svg-tex.pdf, id=6615, page=1
+, 1439.64682pt x 715.6792pt>
+File: ./svg-inkscape/9c2d6095_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/9c2d6095_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/9c2d6095_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.17346pt.
+) [48 <./svg-inkscape/810f4201_Branch vs Primary Rollback_normalized_svg-tex.pd
+f> <./svg-inkscape/9c2d6095_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/9c2d6095_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/f6a6645c_Branch vs Simulation Ti
+me_log_svg-tex.pdf' is 1 on input line 691.
+ (./svg-inkscape/f6a6645c_Branch vs Simulation Time_log_svg-tex.pdf_tex
+<./svg-inkscape/f6a6645c_Branch vs Simulation Time_log_svg-tex.pdf, id=6792, pa
+ge=1, 1439.74165pt x 715.6792pt>
+File: ./svg-inkscape/f6a6645c_Branch vs Simulation Time_log_svg-tex.pdf Graphic
+ file (type pdf)
+<use ./svg-inkscape/f6a6645c_Branch vs Simulation Time_log_svg-tex.pdf, page 1>
+
+Package pdftex.def Info: ./svg-inkscape/f6a6645c_Branch vs Simulation Time_log_
+svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.15161pt.
+)
+Package svg Info: Last page of `./svg-inkscape/b533ee4f_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 697.
+
+(./svg-inkscape/b533ee4f_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/b533ee4f_Branch vs Simulation Time_normalized_svg-tex.pdf, id=6
+794, page=1, 1439.81982pt x 715.6792pt>
+File: ./svg-inkscape/b533ee4f_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/b533ee4f_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/b533ee4f_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1407pt.
+)
+[49 <./svg-inkscape/f6a6645c_Branch vs Simulation Time_log_svg-tex.pdf> <./svg-
+inkscape/b533ee4f_Branch vs Simulation Time_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/b533ee4f_Branch vs Simulation Tim
+e_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group include
+d in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/684269f4_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 704.
+ (./svg-inkscape/684269f4_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/684269f4_ThreadCount vs Sim Time_svg-tex.pdf, id=6959, page=1, 
+1439.74165pt x 715.54602pt>
+File: ./svg-inkscape/684269f4_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/684269f4_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/684269f4_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.11252pt.
+)
+Package svg Info: Last page of `./svg-inkscape/ce38f0cb_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 710.
+
+(./svg-inkscape/ce38f0cb_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/ce38f0cb_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=696
+1, page=1, 1439.81982pt x 715.54602pt>
+File: ./svg-inkscape/ce38f0cb_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/ce38f0cb_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/ce38f0cb_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.1016pt.
+)
+[50 <./svg-inkscape/684269f4_ThreadCount vs Sim Time_svg-tex.pdf> <./svg-inksca
+pe/ce38f0cb_ThreadCount vs Sim Time_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/ce38f0cb_ThreadCount vs Sim Time_
+normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included 
+in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/cd3d33d9_Epidemic100kPerformers_
+(Average)_svg-tex.pdf' is 1 on input line 719.
+ (./svg-inkscape/cd3d33d9_Epidemic100kPerformers_(Average)_svg-tex.pdf_tex
+<./svg-inkscape/cd3d33d9_Epidemic100kPerformers_(Average)_svg-tex.pdf, id=7099,
+ page=1, 1075.64984pt x 568.98442pt>
+File: ./svg-inkscape/cd3d33d9_Epidemic100kPerformers_(Average)_svg-tex.pdf Grap
+hic file (type pdf)
+<use ./svg-inkscape/cd3d33d9_Epidemic100kPerformers_(Average)_svg-tex.pdf, page
+ 1>
+Package pdftex.def Info: ./svg-inkscape/cd3d33d9_Epidemic100kPerformers_(Averag
+e)_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 223.63942pt.
+)
+Package svg Info: Last page of `./svg-inkscape/bdea568b_EpidemicPerformers_(Ave
+rage)_svg-tex.pdf' is 1 on input line 725.
+
+(./svg-inkscape/bdea568b_EpidemicPerformers_(Average)_svg-tex.pdf_tex
+<./svg-inkscape/bdea568b_EpidemicPerformers_(Average)_svg-tex.pdf, id=7101, pag
+e=1, 1075.71257pt x 568.98442pt>
+File: ./svg-inkscape/bdea568b_EpidemicPerformers_(Average)_svg-tex.pdf Graphic 
+file (type pdf)
+<use ./svg-inkscape/bdea568b_EpidemicPerformers_(Average)_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/bdea568b_EpidemicPerformers_(Average)_s
+vg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 223.62206pt.
+) [51 <./svg-inkscape/cd3d33d9_Epidemic100kPerformers_(Average)_svg-tex.pdf> <.
+/svg-inkscape/bdea568b_EpidemicPerformers_(Average)_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/bdea568b_EpidemicPerformers_(Aver
+age)_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>]
+Package svg Info: Last page of `./svg-inkscape/5e758277_PCSPerformers_(Average)
+_svg-tex.pdf' is 1 on input line 732.
+ (./svg-inkscape/5e758277_PCSPerformers_(Average)_svg-tex.pdf_tex
+<./svg-inkscape/5e758277_PCSPerformers_(Average)_svg-tex.pdf, id=7300, page=1, 
+1075.64984pt x 569.151pt>
+File: ./svg-inkscape/5e758277_PCSPerformers_(Average)_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/5e758277_PCSPerformers_(Average)_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/5e758277_PCSPerformers_(Average)_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 223.7049pt.
+)
+Package svg Info: Last page of `./svg-inkscape/e5cf195a_TrafficPerformers_(Aver
+age)_svg-tex.pdf' is 1 on input line 738.
+
+(./svg-inkscape/e5cf195a_TrafficPerformers_(Average)_svg-tex.pdf_tex
+<./svg-inkscape/e5cf195a_TrafficPerformers_(Average)_svg-tex.pdf, id=7302, page
+=1, 1075.64984pt x 568.98442pt>
+File: ./svg-inkscape/e5cf195a_TrafficPerformers_(Average)_svg-tex.pdf Graphic f
+ile (type pdf)
+<use ./svg-inkscape/e5cf195a_TrafficPerformers_(Average)_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/e5cf195a_TrafficPerformers_(Average)_sv
+g-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 223.63942pt.
+) [52 <./svg-inkscape/5e758277_PCSPerformers_(Average)_svg-tex.pdf> <./svg-inks
+cape/e5cf195a_TrafficPerformers_(Average)_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/e5cf195a_TrafficPerformers_(Avera
+ge)_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>]
+Package svg Info: Last page of `./svg-inkscape/c7934a42_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 747.
+ (./svg-inkscape/c7934a42_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/c7934a42_Average Memory Usage vs Branch_svg-tex.pdf, id=7458, p
+age=1, 1438.5187pt x 715.6792pt>
+File: ./svg-inkscape/c7934a42_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/c7934a42_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/c7934a42_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.33727pt.
+)
+Package svg Info: Last page of `./svg-inkscape/ff4dc3b8_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 753.
+
+(./svg-inkscape/ff4dc3b8_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/ff4dc3b8_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=7460, page=1, 1439.09091pt x 715.6792pt>
+File: ./svg-inkscape/ff4dc3b8_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/ff4dc3b8_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/ff4dc3b8_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.2499pt.
+) [53 <./svg-inkscape/c7934a42_Average Memory Usage vs Branch_svg-tex.pdf> <./s
+vg-inkscape/ff4dc3b8_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/ff4dc3b8_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/984b2c31_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 760.
+ (./svg-inkscape/984b2c31_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/984b2c31_Branch vs Primary Rollback_svg-tex.pdf, id=7605, page=
+1, 1437.85338pt x 715.6792pt>
+File: ./svg-inkscape/984b2c31_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/984b2c31_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/984b2c31_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.42462pt.
+)
+Package svg Info: Last page of `./svg-inkscape/2ee24a76_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 766.
+
+(./svg-inkscape/2ee24a76_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/2ee24a76_Branch vs Primary Rollback_log_svg-tex.pdf, id=7607, p
+age=1, 1438.4714pt x 715.6792pt>
+File: ./svg-inkscape/2ee24a76_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/2ee24a76_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/2ee24a76_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.33727pt.
+)
+[54 <./svg-inkscape/984b2c31_Branch vs Primary Rollback_svg-tex.pdf> <./svg-ink
+scape/2ee24a76_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/2ee24a76_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/c83532e7_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 773.
+
+(./svg-inkscape/c83532e7_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/c83532e7_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+7784, page=1, 1439.09091pt x 715.6792pt>
+File: ./svg-inkscape/c83532e7_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/c83532e7_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/c83532e7_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.2499pt.
+)
+Package svg Info: Last page of `./svg-inkscape/7734d34d_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 779.
+(./svg-inkscape/7734d34d_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/7734d34d_Branch vs Simulation Time_svg-tex.pdf, id=7786, page=1
+, 1438.9179pt x 715.6792pt>
+File: ./svg-inkscape/7734d34d_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/7734d34d_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/7734d34d_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.27174pt.
+) [55 <./svg-inkscape/c83532e7_Branch vs Primary Rollback_normalized_svg-tex.pd
+f> <./svg-inkscape/7734d34d_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/7734d34d_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/fb034ef5_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 786.
+
+(./svg-inkscape/fb034ef5_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/fb034ef5_Branch vs Simulation Time_normalized_svg-tex.pdf, id=7
+927, page=1, 1439.09091pt x 715.6792pt>
+File: ./svg-inkscape/fb034ef5_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/fb034ef5_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/fb034ef5_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.2499pt.
+)
+Package svg Info: Last page of `./svg-inkscape/78952bef_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 792.
+
+(./svg-inkscape/78952bef_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/78952bef_ThreadCount vs Sim Time_svg-tex.pdf, id=7929, page=1, 
+1439.27261pt x 715.54602pt>
+File: ./svg-inkscape/78952bef_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/78952bef_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/78952bef_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.18893pt.
+) [56 <./svg-inkscape/fb034ef5_Branch vs Simulation Time_normalized_svg-tex.pdf
+> <./svg-inkscape/78952bef_ThreadCount vs Sim Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/78952bef_ThreadCount vs Sim Time_
+svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+Package svg Info: Last page of `./svg-inkscape/8121dd78_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 799.
+ (./svg-inkscape/8121dd78_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/8121dd78_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=806
+1, page=1, 1439.09091pt x 715.54602pt>
+File: ./svg-inkscape/8121dd78_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/8121dd78_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/8121dd78_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.21078pt.
+) [57 <./svg-inkscape/8121dd78_ThreadCount vs Sim Time_normalized_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/724ac2b3_Average Memory Usage vs
+ Branch_svg-tex.pdf' is 1 on input line 808.
+
+(./svg-inkscape/724ac2b3_Average Memory Usage vs Branch_svg-tex.pdf_tex
+<./svg-inkscape/724ac2b3_Average Memory Usage vs Branch_svg-tex.pdf, id=8109, p
+age=1, 1438.61354pt x 715.6792pt>
+File: ./svg-inkscape/724ac2b3_Average Memory Usage vs Branch_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/724ac2b3_Average Memory Usage vs Branch_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/724ac2b3_Average Memory Usage vs Branch
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.31541pt.
+)
+Package svg Info: Last page of `./svg-inkscape/45071ad6_Average Memory Usage vs
+ Branch_normalized_svg-tex.pdf' is 1 on input line 814.
+
+(./svg-inkscape/45071ad6_Average Memory Usage vs Branch_normalized_svg-tex.pdf_
+tex
+<./svg-inkscape/45071ad6_Average Memory Usage vs Branch_normalized_svg-tex.pdf,
+ id=8111, page=1, 1439.09091pt x 715.6792pt>
+File: ./svg-inkscape/45071ad6_Average Memory Usage vs Branch_normalized_svg-tex
+.pdf Graphic file (type pdf)
+<use ./svg-inkscape/45071ad6_Average Memory Usage vs Branch_normalized_svg-tex.
+pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/45071ad6_Average Memory Usage vs Branch
+_normalized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.2499pt.
+) [58 <./svg-inkscape/724ac2b3_Average Memory Usage vs Branch_svg-tex.pdf> <./s
+vg-inkscape/45071ad6_Average Memory Usage vs Branch_normalized_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/45071ad6_Average Memory Usage vs 
+Branch_normalized_svg-tex.pdf): PDF inclusion: multiple pdfs with page group in
+cluded in a single page
+>]
+Package svg Info: Last page of `./svg-inkscape/dfca7db9_Branch vs Primary Rollb
+ack_svg-tex.pdf' is 1 on input line 821.
+ (./svg-inkscape/dfca7db9_Branch vs Primary Rollback_svg-tex.pdf_tex
+<./svg-inkscape/dfca7db9_Branch vs Primary Rollback_svg-tex.pdf, id=8255, page=
+1, 1437.85338pt x 715.6792pt>
+File: ./svg-inkscape/dfca7db9_Branch vs Primary Rollback_svg-tex.pdf Graphic fi
+le (type pdf)
+<use ./svg-inkscape/dfca7db9_Branch vs Primary Rollback_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/dfca7db9_Branch vs Primary Rollback_svg
+-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.42462pt.
+)
+Package svg Info: Last page of `./svg-inkscape/69f96723_Branch vs Primary Rollb
+ack_log_svg-tex.pdf' is 1 on input line 827.
+
+(./svg-inkscape/69f96723_Branch vs Primary Rollback_log_svg-tex.pdf_tex
+<./svg-inkscape/69f96723_Branch vs Primary Rollback_log_svg-tex.pdf, id=8257, p
+age=1, 1438.4714pt x 715.6792pt>
+File: ./svg-inkscape/69f96723_Branch vs Primary Rollback_log_svg-tex.pdf Graphi
+c file (type pdf)
+<use ./svg-inkscape/69f96723_Branch vs Primary Rollback_log_svg-tex.pdf, page 1
+>
+Package pdftex.def Info: ./svg-inkscape/69f96723_Branch vs Primary Rollback_log
+_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.33727pt.
+)
+[59 <./svg-inkscape/dfca7db9_Branch vs Primary Rollback_svg-tex.pdf> <./svg-ink
+scape/69f96723_Branch vs Primary Rollback_log_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/69f96723_Branch vs Primary Rollba
+ck_log_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Package svg Info: Last page of `./svg-inkscape/0fa26a14_Branch vs Primary Rollb
+ack_normalized_svg-tex.pdf' is 1 on input line 834.
+
+(./svg-inkscape/0fa26a14_Branch vs Primary Rollback_normalized_svg-tex.pdf_tex
+<./svg-inkscape/0fa26a14_Branch vs Primary Rollback_normalized_svg-tex.pdf, id=
+8432, page=1, 1439.09091pt x 715.6792pt>
+File: ./svg-inkscape/0fa26a14_Branch vs Primary Rollback_normalized_svg-tex.pdf
+ Graphic file (type pdf)
+<use ./svg-inkscape/0fa26a14_Branch vs Primary Rollback_normalized_svg-tex.pdf,
+ page 1>
+Package pdftex.def Info: ./svg-inkscape/0fa26a14_Branch vs Primary Rollback_nor
+malized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.2499pt.
+)
+Package svg Info: Last page of `./svg-inkscape/d4c9dffc_Branch vs Simulation Ti
+me_svg-tex.pdf' is 1 on input line 840.
+(./svg-inkscape/d4c9dffc_Branch vs Simulation Time_svg-tex.pdf_tex
+<./svg-inkscape/d4c9dffc_Branch vs Simulation Time_svg-tex.pdf, id=8434, page=1
+, 1439.01274pt x 715.6792pt>
+File: ./svg-inkscape/d4c9dffc_Branch vs Simulation Time_svg-tex.pdf Graphic fil
+e (type pdf)
+<use ./svg-inkscape/d4c9dffc_Branch vs Simulation Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/d4c9dffc_Branch vs Simulation Time_svg-
+tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.26082pt.
+) [60 <./svg-inkscape/0fa26a14_Branch vs Primary Rollback_normalized_svg-tex.pd
+f> <./svg-inkscape/d4c9dffc_Branch vs Simulation Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/d4c9dffc_Branch vs Simulation Tim
+e_svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Package svg Info: Last page of `./svg-inkscape/bede412d_Branch vs Simulation Ti
+me_normalized_svg-tex.pdf' is 1 on input line 847.
+
+(./svg-inkscape/bede412d_Branch vs Simulation Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/bede412d_Branch vs Simulation Time_normalized_svg-tex.pdf, id=8
+572, page=1, 1439.09091pt x 715.6792pt>
+File: ./svg-inkscape/bede412d_Branch vs Simulation Time_normalized_svg-tex.pdf 
+Graphic file (type pdf)
+<use ./svg-inkscape/bede412d_Branch vs Simulation Time_normalized_svg-tex.pdf, 
+page 1>
+Package pdftex.def Info: ./svg-inkscape/bede412d_Branch vs Simulation Time_norm
+alized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.2499pt.
+)
+Package svg Info: Last page of `./svg-inkscape/693c43f7_ThreadCount vs Sim Time
+_svg-tex.pdf' is 1 on input line 853.
+
+(./svg-inkscape/693c43f7_ThreadCount vs Sim Time_svg-tex.pdf_tex
+<./svg-inkscape/693c43f7_ThreadCount vs Sim Time_svg-tex.pdf, id=8574, page=1, 
+1439.27261pt x 715.54602pt>
+File: ./svg-inkscape/693c43f7_ThreadCount vs Sim Time_svg-tex.pdf Graphic file 
+(type pdf)
+<use ./svg-inkscape/693c43f7_ThreadCount vs Sim Time_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/693c43f7_ThreadCount vs Sim Time_svg-te
+x.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.18893pt.
+) [61 <./svg-inkscape/bede412d_Branch vs Simulation Time_normalized_svg-tex.pdf
+> <./svg-inkscape/693c43f7_ThreadCount vs Sim Time_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/693c43f7_ThreadCount vs Sim Time_
+svg-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+Package svg Info: Last page of `./svg-inkscape/54b55a94_ThreadCount vs Sim Time
+_normalized_svg-tex.pdf' is 1 on input line 860.
+ (./svg-inkscape/54b55a94_ThreadCount vs Sim Time_normalized_svg-tex.pdf_tex
+<./svg-inkscape/54b55a94_ThreadCount vs Sim Time_normalized_svg-tex.pdf, id=870
+0, page=1, 1439.09091pt x 715.54602pt>
+File: ./svg-inkscape/54b55a94_ThreadCount vs Sim Time_normalized_svg-tex.pdf Gr
+aphic file (type pdf)
+<use ./svg-inkscape/54b55a94_ThreadCount vs Sim Time_normalized_svg-tex.pdf, pa
+ge 1>
+Package pdftex.def Info: ./svg-inkscape/54b55a94_ThreadCount vs Sim Time_normal
+ized_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 422.77664pt x 210.21078pt.
+)) (./svg_collection.bbl) [62 <./svg-inkscape/54b55a94_ThreadCount vs Sim Time_
+normalized_svg-tex.pdf>] (./svg_collection.aux)
+Package rerunfilecheck Info: File `svg_collection.out' has not changed.
+(rerunfilecheck)             Checksum: 0BEE076003220F58FE2A83C9AC1E580B;4665.
+ ) 
+Here is how much of TeX's memory you used:
+ 15540 strings out of 478287
+ 347443 string characters out of 5849289
+ 557306 words of memory out of 5000000
+ 32845 multiletter control sequences out of 15000+600000
+ 477687 words of font info for 57 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 94i,11n,92p,667b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on svg_collection.pdf (64 pages, 4561559 bytes).
+PDF statistics:
+ 8832 PDF objects out of 8907 (max. 8388607)
+ 5889 compressed objects within 59 object streams
+ 206 named destinations out of 1000 (max. 500000)
+ 1313 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,12 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder         branch         mean         sem
+         pcs-10k         master 31396.450000 5379.219410
+         pcs-10k relaxedCompare     2.200000    0.344887
+ epidemic-10k-ba         master   161.400000   34.431656
+ epidemic-10k-ba relaxedCompare    36.888889    8.530181
+     traffic-10k         master 13623.000000 3881.421942
+     traffic-10k relaxedCompare    13.700000    2.265931
+epidemic-100k-ba         master    22.500000    7.678614
+epidemic-100k-ba relaxedCompare     9.800000    3.424747
+

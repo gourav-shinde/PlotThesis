@@ -1,0 +1,36 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder  State_Save_Period         branch   mean        sem
+         pcs-10k                  5         master  143.2   0.800000
+         pcs-10k                  5 relaxedCompare    0.0   0.000000
+         pcs-10k                  8         master  141.2   1.593738
+         pcs-10k                  8 relaxedCompare    0.0   0.000000
+         pcs-10k                 10         master  137.0   0.894427
+         pcs-10k                 10 relaxedCompare    0.0   0.000000
+         pcs-10k                 32         master    NaN        NaN
+         pcs-10k                 32 relaxedCompare    NaN        NaN
+ epidemic-10k-ba                  5         master    NaN        NaN
+ epidemic-10k-ba                  5 relaxedCompare    NaN        NaN
+ epidemic-10k-ba                  8         master    NaN        NaN
+ epidemic-10k-ba                  8 relaxedCompare    NaN        NaN
+ epidemic-10k-ba                 10         master  337.6  85.921243
+ epidemic-10k-ba                 10 relaxedCompare  592.4 125.369693
+ epidemic-10k-ba                 32         master 1853.0   9.612492
+ epidemic-10k-ba                 32 relaxedCompare 1511.8 233.132023
+     traffic-10k                  5         master  148.8   2.107131
+     traffic-10k                  5 relaxedCompare    0.0   0.000000
+     traffic-10k                  8         master  146.6   1.568439
+     traffic-10k                  8 relaxedCompare    0.0   0.000000
+     traffic-10k                 10         master  145.2   2.034699
+     traffic-10k                 10 relaxedCompare    0.0   0.000000
+     traffic-10k                 32         master    NaN        NaN
+     traffic-10k                 32 relaxedCompare    NaN        NaN
+epidemic-100k-ba                  5         master  343.8  21.870985
+epidemic-100k-ba                  5 relaxedCompare  334.0  22.432120
+epidemic-100k-ba                  8         master  328.2  36.583330
+epidemic-100k-ba                  8 relaxedCompare  337.2  19.693654
+epidemic-100k-ba                 10         master  494.8 101.307650
+epidemic-100k-ba                 10 relaxedCompare  476.6  49.715792
+epidemic-100k-ba                 32         master    NaN        NaN
+epidemic-100k-ba                 32 relaxedCompare    NaN        NaN
+

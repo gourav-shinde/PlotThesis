@@ -1,0 +1,13 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder         branch       mean       sem
+    epidemic-10k         master 799.285714 55.379850
+    epidemic-10k           SIMD 832.384615 68.849384
+    epidemic-10k relaxedCompare 910.235294 64.350918
+     traffic-10k         master 257.300000  4.747046
+     traffic-10k           SIMD 343.200000  8.178291
+     traffic-10k relaxedCompare   0.000000  0.000000
+epidemic-100k-ba         master 570.400000 19.956174
+epidemic-100k-ba           SIMD 600.000000 21.566435
+epidemic-100k-ba relaxedCompare 570.500000 23.193510
+

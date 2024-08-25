@@ -1,0 +1,12 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder        branch     mean         sem
+         pcs-10k        master 35207.45 2751.653313
+         pcs-10k fossil_thread 34759.20 2968.401282
+ epidemic-10k-ba        master     6.05    1.352337
+ epidemic-10k-ba fossil_thread     8.15    1.899134
+     traffic-10k        master  9275.00 1607.730104
+     traffic-10k fossil_thread  9250.80 1499.152907
+epidemic-100k-ba        master     0.30    0.300000
+epidemic-100k-ba fossil_thread     0.30    0.152753
+

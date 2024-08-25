@@ -1,0 +1,12 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder branch         mean         sem
+         pcs-10k master 43104.733333 7398.345961
+         pcs-10k SynGVT 47288.400000 7866.095236
+ epidemic-10k-ba master   147.733333   29.729329
+ epidemic-10k-ba SynGVT   143.733333   29.714109
+     traffic-10k master 17911.333333 3236.756168
+     traffic-10k SynGVT 19869.266667 3952.346046
+epidemic-100k-ba master    20.000000    4.778922
+epidemic-100k-ba SynGVT    25.466667    5.729511
+

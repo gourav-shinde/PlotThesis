@@ -1,0 +1,28 @@
+Data for plot: Branch vs Simulation Time
+
+          Folder  State_Save_Period            branch      mean      sem
+ epidemic-10k-ba                  8            master 186.24840 0.392883
+ epidemic-10k-ba                  8 UnifiedMainBranch 191.52950 0.247835
+ epidemic-10k-ba                 10            master 171.52640 0.302297
+ epidemic-10k-ba                 10 UnifiedMainBranch 176.68440 0.198538
+ epidemic-10k-ba                  5            master       NaN      NaN
+ epidemic-10k-ba                  5 UnifiedMainBranch       NaN      NaN
+     traffic-10k                  8            master  13.88696 0.150705
+     traffic-10k                  8 UnifiedMainBranch  33.22700 0.282055
+     traffic-10k                 10            master  13.72484 0.043711
+     traffic-10k                 10 UnifiedMainBranch  33.38266 0.186451
+     traffic-10k                  5            master  14.55568 0.073689
+     traffic-10k                  5 UnifiedMainBranch  34.64436 0.310478
+epidemic-100k-ba                  8            master  49.32626 0.095313
+epidemic-100k-ba                  8 UnifiedMainBranch  50.44416 0.050511
+epidemic-100k-ba                 10            master  45.42354 0.070665
+epidemic-100k-ba                 10 UnifiedMainBranch  46.78876 0.027223
+epidemic-100k-ba                  5            master  60.75496 0.130243
+epidemic-100k-ba                  5 UnifiedMainBranch  61.64308 0.088521
+     traffic-20k                  8            master  27.83792 0.250295
+     traffic-20k                  8 UnifiedMainBranch  53.86212 0.273730
+     traffic-20k                 10            master  27.16908 0.115956
+     traffic-20k                 10 UnifiedMainBranch  53.52768 0.233661
+     traffic-20k                  5            master  29.11972 0.246799
+     traffic-20k                  5 UnifiedMainBranch  55.91726 0.103609
+

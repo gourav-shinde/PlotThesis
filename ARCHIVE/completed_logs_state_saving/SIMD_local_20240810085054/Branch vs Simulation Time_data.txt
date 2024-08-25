@@ -1,0 +1,36 @@
+Data for plot: Branch vs Simulation Time
+
+          Folder  State_Save_Period         branch       mean      sem
+         pcs-10k                  5         master  11.135380 0.053635
+         pcs-10k                  5 relaxedCompare   0.023275 0.000339
+         pcs-10k                  8         master  10.658240 0.119238
+         pcs-10k                  8 relaxedCompare   0.021576 0.000296
+         pcs-10k                 10         master  10.920740 0.096299
+         pcs-10k                 10 relaxedCompare   0.021007 0.000259
+         pcs-10k                 32         master        NaN      NaN
+         pcs-10k                 32 relaxedCompare        NaN      NaN
+ epidemic-10k-ba                  5         master        NaN      NaN
+ epidemic-10k-ba                  5 relaxedCompare        NaN      NaN
+ epidemic-10k-ba                  8         master        NaN      NaN
+ epidemic-10k-ba                  8 relaxedCompare        NaN      NaN
+ epidemic-10k-ba                 10         master 149.536400 0.931062
+ epidemic-10k-ba                 10 relaxedCompare 150.794600 1.101643
+ epidemic-10k-ba                 32         master 114.470000 0.716805
+ epidemic-10k-ba                 32 relaxedCompare 116.876600 0.641826
+     traffic-10k                  5         master  12.903300 0.102817
+     traffic-10k                  5 relaxedCompare   0.069412 0.000954
+     traffic-10k                  8         master  12.459920 0.087383
+     traffic-10k                  8 relaxedCompare   0.065077 0.000784
+     traffic-10k                 10         master  12.308720 0.032246
+     traffic-10k                 10 relaxedCompare   0.063870 0.000978
+     traffic-10k                 32         master        NaN      NaN
+     traffic-10k                 32 relaxedCompare        NaN      NaN
+epidemic-100k-ba                  5         master  54.183680 0.476885
+epidemic-100k-ba                  5 relaxedCompare  54.773880 0.703444
+epidemic-100k-ba                  8         master  44.199420 0.259951
+epidemic-100k-ba                  8 relaxedCompare  46.204640 0.089608
+epidemic-100k-ba                 10         master  41.186980 0.093336
+epidemic-100k-ba                 10 relaxedCompare  41.223900 0.418769
+epidemic-100k-ba                 32         master        NaN      NaN
+epidemic-100k-ba                 32 relaxedCompare        NaN      NaN
+

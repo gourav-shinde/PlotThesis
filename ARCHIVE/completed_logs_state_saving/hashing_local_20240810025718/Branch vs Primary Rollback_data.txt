@@ -1,0 +1,28 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder  State_Save_Period     branch     mean         sem
+         pcs-10k                  5     master  13736.6 1311.807783
+         pcs-10k                  5 HashingPOC 442027.0  580.154376
+         pcs-10k                  8     master  11634.6  739.207995
+         pcs-10k                  8 HashingPOC 440752.2  668.850312
+         pcs-10k                 10     master  13224.0 1255.915801
+         pcs-10k                 10 HashingPOC 440785.0  461.666980
+ epidemic-10k-ba                  5     master      NaN         NaN
+ epidemic-10k-ba                  5 HashingPOC      NaN         NaN
+ epidemic-10k-ba                  8     master     22.8    6.807349
+ epidemic-10k-ba                  8 HashingPOC     43.6   12.576168
+ epidemic-10k-ba                 10     master     27.6    4.985980
+ epidemic-10k-ba                 10 HashingPOC     43.8    6.445153
+     traffic-10k                  5     master   3133.8  240.634037
+     traffic-10k                  5 HashingPOC   3232.2  156.927818
+     traffic-10k                  8     master   3581.0  144.704181
+     traffic-10k                  8 HashingPOC   3475.6   91.585807
+     traffic-10k                 10     master   3445.2  299.149862
+     traffic-10k                 10 HashingPOC   3799.0  308.331802
+epidemic-100k-ba                  5     master      0.0    0.000000
+epidemic-100k-ba                  5 HashingPOC      6.0    0.000000
+epidemic-100k-ba                  8     master      0.0    0.000000
+epidemic-100k-ba                  8 HashingPOC      6.0    0.000000
+epidemic-100k-ba                 10     master      0.0    0.000000
+epidemic-100k-ba                 10 HashingPOC      6.0    0.000000
+

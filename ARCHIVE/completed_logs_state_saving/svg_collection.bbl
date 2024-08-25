@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{barabasi1999emergence}
+Albert-L{\'a}szl{\'o} Barab{\'a}si and R{\'e}ka Albert.
+\newblock Emergence of scaling in random networks.
+\newblock {\em science}, 286(5439):509--512, 1999.
+
+\bibitem{barrett2008episimdemics}
+Christopher~L Barrett, Keith~R Bisset, Stephen~G Eubank, Xizhou Feng, and
+  Madhav~V Marathe.
+\newblock Episimdemics: an efficient algorithm for simulating the spread of
+  infectious disease over large realistic social networks.
+\newblock In {\em Proceedings of the 2008 ACM/IEEE conference on
+  Supercomputing}, pages 1--12, 2008.
+
+\bibitem{perumalla2012discrete}
+Kalyan~S Perumalla and Sudip~K Seal.
+\newblock Discrete event modeling and massively parallel execution of epidemic
+  outbreak phenomena.
+\newblock {\em Simulation}, 88(7):768--783, 2012.
+
+\bibitem{watts1998collective}
+Duncan~J Watts and Steven~H Strogatz.
+\newblock Collective dynamics of 'small-world'networks.
+\newblock {\em nature}, 393(6684):440--442, 1998.
+
+\end{thebibliography}

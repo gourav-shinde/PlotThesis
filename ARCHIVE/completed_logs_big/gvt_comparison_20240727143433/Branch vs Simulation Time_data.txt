@@ -1,0 +1,12 @@
+Data for plot: Branch vs Simulation Time
+
+          Folder branch       mean      sem
+         pcs-10k master  11.714087 0.161806
+         pcs-10k SynGVT  11.837153 0.157173
+ epidemic-10k-ba master 119.363500 2.961401
+ epidemic-10k-ba SynGVT 120.685700 2.945608
+     traffic-10k master  12.232447 0.233161
+     traffic-10k SynGVT  12.313113 0.250126
+epidemic-100k-ba master  33.100860 0.423052
+epidemic-100k-ba SynGVT  33.530693 0.411331
+

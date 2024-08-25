@@ -1,0 +1,10 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder            branch     mean         sem
+ epidemic-10k-ba            master    137.3   46.447354
+ epidemic-10k-ba UnifiedMainBranch    118.7   46.604971
+     traffic-10k            master  13340.2 3700.336435
+     traffic-10k UnifiedMainBranch 141125.1 5821.374407
+epidemic-100k-ba            master     19.3    6.719871
+epidemic-100k-ba UnifiedMainBranch     26.5    8.975584
+

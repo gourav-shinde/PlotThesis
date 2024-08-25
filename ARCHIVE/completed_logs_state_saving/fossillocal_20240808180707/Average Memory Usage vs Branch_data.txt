@@ -1,0 +1,36 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder  State_Save_Period        branch   mean       sem
+         pcs-10k                  5        master  254.6  0.927362
+         pcs-10k                  5 fossil_thread  257.2  1.392839
+         pcs-10k                  8        master  230.8  2.800000
+         pcs-10k                  8 fossil_thread  233.0  2.121320
+         pcs-10k                 10        master  253.6  3.414674
+         pcs-10k                 10 fossil_thread  255.6  2.088061
+         pcs-10k                 32        master    NaN       NaN
+         pcs-10k                 32 fossil_thread    NaN       NaN
+ epidemic-10k-ba                  5        master    NaN       NaN
+ epidemic-10k-ba                  5 fossil_thread    NaN       NaN
+ epidemic-10k-ba                  8        master    NaN       NaN
+ epidemic-10k-ba                  8 fossil_thread    NaN       NaN
+ epidemic-10k-ba                 10        master  929.8 45.374442
+ epidemic-10k-ba                 10 fossil_thread  981.8 37.642263
+ epidemic-10k-ba                 32        master  544.8  8.368990
+ epidemic-10k-ba                 32 fossil_thread  552.2 11.311057
+     traffic-10k                  5        master  266.2  2.177154
+     traffic-10k                  5 fossil_thread  266.2  2.154066
+     traffic-10k                  8        master  228.4  1.029563
+     traffic-10k                  8 fossil_thread  233.0  1.897367
+     traffic-10k                 10        master  250.4  1.860108
+     traffic-10k                 10 fossil_thread  249.4  2.420744
+     traffic-10k                 32        master    NaN       NaN
+     traffic-10k                 32 fossil_thread    NaN       NaN
+epidemic-100k-ba                  5        master 1150.4 22.166642
+epidemic-100k-ba                  5 fossil_thread 1085.8 20.197525
+epidemic-100k-ba                  8        master  822.0  6.172520
+epidemic-100k-ba                  8 fossil_thread  822.0  7.190271
+epidemic-100k-ba                 10        master  742.2  8.058536
+epidemic-100k-ba                 10 fossil_thread  762.8  8.193900
+epidemic-100k-ba                 32        master    NaN       NaN
+epidemic-100k-ba                 32 fossil_thread    NaN       NaN
+

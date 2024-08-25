@@ -1,0 +1,8 @@
+Data for plot: ThreadCount vs Sim Time
+
+ Worker_Thread_Count         branch      mean       sem
+                   3         master 54.750600 10.531634
+                   3 relaxedCompare 49.489878 11.300636
+                   6         master 37.708164  6.998310
+                   6 relaxedCompare 29.447949  7.568380
+

@@ -1,0 +1,12 @@
+Data for plot: Branch vs Simulation Time
+
+          Folder        branch       mean      sem
+         pcs-10k        master   9.302988 0.263156
+         pcs-10k fossil_thread   9.181272 0.268184
+ epidemic-10k-ba        master 110.876790 6.129193
+ epidemic-10k-ba fossil_thread 111.331975 6.090219
+     traffic-10k        master  10.560791 0.520434
+     traffic-10k fossil_thread  10.590908 0.529087
+epidemic-100k-ba        master  25.629010 1.418619
+epidemic-100k-ba fossil_thread  25.982760 1.378640
+

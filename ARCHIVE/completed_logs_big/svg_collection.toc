@@ -1,0 +1,30 @@
+\contentsline {section}{\numberline {1}Discussion}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Model Characteristics and Performance}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Configuration and Platform Considerations}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Performance Factors and Optimization}{1}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Event Processing Time}{1}{subsubsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.4}Performance Optimization: Rollbacks and State Saving}{2}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Introduction to Rollbacks and State Saving}{2}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}State Saving and Rollback Relationship}{2}{subsubsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.5}Branch Implementations}{2}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Master Branch}{2}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Fossil Branch}{2}{subsubsection.1.5.2}%
+\contentsline {subsubsection}{\numberline {1.5.3}SIMD Branch}{3}{subsubsection.1.5.3}%
+\contentsline {subsubsection}{\numberline {1.5.4}Hashing Branch}{3}{subsubsection.1.5.4}%
+\contentsline {subsubsection}{\numberline {1.5.5}Relaxed Compare Branch}{3}{subsubsection.1.5.5}%
+\contentsline {subsubsection}{\numberline {1.5.6}Unified Queue Branch}{3}{subsubsection.1.5.6}%
+\contentsline {subsection}{\numberline {1.6}GVT Implementation Comparison}{4}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Future Work}{4}{subsection.1.7}%
+\contentsline {section}{\numberline {2}Label Definitions}{5}{section.2}%
+\contentsline {section}{\numberline {3}fossil}{6}{section.3}%
+\contentsline {section}{\numberline {4}fossillocal}{11}{section.4}%
+\contentsline {section}{\numberline {5}gvt\_comparison}{16}{section.5}%
+\contentsline {section}{\numberline {6}gvt\_comparison\_local}{21}{section.6}%
+\contentsline {section}{\numberline {7}hashing}{26}{section.7}%
+\contentsline {section}{\numberline {8}hashing\_local}{31}{section.8}%
+\contentsline {section}{\numberline {9}SIMD}{36}{section.9}%
+\contentsline {section}{\numberline {10}SIMD\_local}{41}{section.10}%
+\contentsline {section}{\numberline {11}SIMDoptiplex}{46}{section.11}%
+\contentsline {section}{\numberline {12}Top Performers}{51}{section.12}%
+\contentsline {section}{\numberline {13}unified}{53}{section.13}%
+\contentsline {section}{\numberline {14}unified\_local}{58}{section.14}%

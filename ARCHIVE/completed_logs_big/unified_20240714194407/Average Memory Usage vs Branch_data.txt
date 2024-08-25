@@ -1,0 +1,10 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder            branch   mean       sem
+ epidemic-10k-ba            master 1825.1 11.715564
+ epidemic-10k-ba UnifiedMainBranch  338.6  9.791379
+     traffic-10k            master  153.7  1.932471
+     traffic-10k UnifiedMainBranch  513.5  3.310757
+epidemic-100k-ba            master 1538.2 29.003755
+epidemic-100k-ba UnifiedMainBranch  312.3  6.411881
+

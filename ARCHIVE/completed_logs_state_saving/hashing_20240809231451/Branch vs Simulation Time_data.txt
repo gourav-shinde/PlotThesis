@@ -1,0 +1,28 @@
+Data for plot: Branch vs Simulation Time
+
+          Folder  State_Save_Period     branch      mean      sem
+         pcs-10k                  5     master  13.72674 0.109271
+         pcs-10k                  5 HashingPOC       NaN      NaN
+         pcs-10k                  8     master  13.23964 0.083321
+         pcs-10k                  8 HashingPOC       NaN      NaN
+         pcs-10k                 10     master  13.11756 0.104741
+         pcs-10k                 10 HashingPOC       NaN      NaN
+ epidemic-10k-ba                  5     master       NaN      NaN
+ epidemic-10k-ba                  5 HashingPOC       NaN      NaN
+ epidemic-10k-ba                  8     master 186.47500 0.209044
+ epidemic-10k-ba                  8 HashingPOC 190.20700 0.236080
+ epidemic-10k-ba                 10     master 171.14420 0.175775
+ epidemic-10k-ba                 10 HashingPOC 175.88920 0.307113
+     traffic-10k                  5     master  14.49542 0.108181
+     traffic-10k                  5 HashingPOC  14.50140 0.113728
+     traffic-10k                  8     master  13.86252 0.055826
+     traffic-10k                  8 HashingPOC  13.79534 0.087502
+     traffic-10k                 10     master  13.68560 0.076584
+     traffic-10k                 10 HashingPOC  13.67336 0.054387
+epidemic-100k-ba                  5     master  60.64724 0.136348
+epidemic-100k-ba                  5 HashingPOC  61.82558 0.184156
+epidemic-100k-ba                  8     master  49.42474 0.102321
+epidemic-100k-ba                  8 HashingPOC  50.39626 0.065711
+epidemic-100k-ba                 10     master  45.47384 0.133248
+epidemic-100k-ba                 10 HashingPOC  46.36036 0.121173
+

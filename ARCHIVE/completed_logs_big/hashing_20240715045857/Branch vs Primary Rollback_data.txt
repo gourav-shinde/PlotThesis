@@ -1,0 +1,12 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder     branch    mean         sem
+         pcs-10k     master 34819.2 4281.778877
+         pcs-10k HashingPOC     NaN         NaN
+ epidemic-10k-ba     master     5.7    1.527889
+ epidemic-10k-ba HashingPOC    25.1    1.479114
+     traffic-10k     master 10200.0 1448.761049
+     traffic-10k HashingPOC  9202.3 1409.006325
+epidemic-100k-ba     master     0.4    0.400000
+epidemic-100k-ba HashingPOC     6.6    0.305505
+

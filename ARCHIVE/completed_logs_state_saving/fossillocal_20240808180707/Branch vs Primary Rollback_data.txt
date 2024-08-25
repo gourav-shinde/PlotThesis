@@ -1,0 +1,36 @@
+Data for plot: Branch vs Primary Rollback
+
+          Folder  State_Save_Period        branch    mean        sem
+         pcs-10k                  5        master 14637.6 851.253993
+         pcs-10k                  5 fossil_thread 14506.4 695.904059
+         pcs-10k                  8        master 11331.8 827.345780
+         pcs-10k                  8 fossil_thread 11232.2 978.588187
+         pcs-10k                 10        master 13399.4 810.852860
+         pcs-10k                 10 fossil_thread 12409.2 907.332651
+         pcs-10k                 32        master     NaN        NaN
+         pcs-10k                 32 fossil_thread     NaN        NaN
+ epidemic-10k-ba                  5        master     NaN        NaN
+ epidemic-10k-ba                  5 fossil_thread     NaN        NaN
+ epidemic-10k-ba                  8        master     NaN        NaN
+ epidemic-10k-ba                  8 fossil_thread     NaN        NaN
+ epidemic-10k-ba                 10        master    43.8  10.892199
+ epidemic-10k-ba                 10 fossil_thread    24.4  10.007997
+ epidemic-10k-ba                 32        master     0.0   0.000000
+ epidemic-10k-ba                 32 fossil_thread     0.4   0.400000
+     traffic-10k                  5        master  3401.8 265.451201
+     traffic-10k                  5 fossil_thread  3136.0 373.915097
+     traffic-10k                  8        master  3452.4 276.604158
+     traffic-10k                  8 fossil_thread  3595.0 188.399045
+     traffic-10k                 10        master  3311.2 199.650294
+     traffic-10k                 10 fossil_thread  3261.4 103.544000
+     traffic-10k                 32        master     NaN        NaN
+     traffic-10k                 32 fossil_thread     NaN        NaN
+epidemic-100k-ba                  5        master     0.0   0.000000
+epidemic-100k-ba                  5 fossil_thread     0.0   0.000000
+epidemic-100k-ba                  8        master     0.0   0.000000
+epidemic-100k-ba                  8 fossil_thread     0.0   0.000000
+epidemic-100k-ba                 10        master     0.0   0.000000
+epidemic-100k-ba                 10 fossil_thread     0.0   0.000000
+epidemic-100k-ba                 32        master     NaN        NaN
+epidemic-100k-ba                 32 fossil_thread     NaN        NaN
+

@@ -1,0 +1,12 @@
+Data for plot: Branch vs Simulation Time
+
+          Folder     branch      mean      sem
+         pcs-10k     master  9.271541 0.378910
+         pcs-10k HashingPOC 13.396110 0.639048
+ epidemic-10k-ba     master 96.030180 6.167475
+ epidemic-10k-ba HashingPOC 98.760010 6.565974
+     traffic-10k     master 10.570047 0.524098
+     traffic-10k HashingPOC 10.465793 0.447938
+epidemic-100k-ba     master 26.005270 1.372277
+epidemic-100k-ba HashingPOC 26.451720 1.484983
+

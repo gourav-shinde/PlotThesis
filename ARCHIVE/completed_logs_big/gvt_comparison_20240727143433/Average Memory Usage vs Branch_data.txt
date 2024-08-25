@@ -1,0 +1,12 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder branch        mean       sem
+         pcs-10k master  144.733333  1.277895
+         pcs-10k SynGVT  136.533333  0.755089
+ epidemic-10k-ba master 1839.700000  9.302389
+ epidemic-10k-ba SynGVT 1843.300000 15.062131
+     traffic-10k master  156.133333  1.443761
+     traffic-10k SynGVT  145.733333  2.266667
+epidemic-100k-ba master 1568.933333 34.707000
+epidemic-100k-ba SynGVT 1589.400000 36.461565
+

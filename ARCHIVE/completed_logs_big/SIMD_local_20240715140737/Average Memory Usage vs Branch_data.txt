@@ -1,0 +1,12 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder         branch       mean       sem
+         pcs-10k         master 289.650000  6.204105
+         pcs-10k relaxedCompare   0.000000  0.000000
+ epidemic-10k-ba         master 936.350000 63.365825
+ epidemic-10k-ba relaxedCompare 896.111111 65.833117
+     traffic-10k         master 325.700000 20.010581
+     traffic-10k relaxedCompare   0.000000  0.000000
+epidemic-100k-ba         master 653.400000 45.265439
+epidemic-100k-ba relaxedCompare 646.300000 45.259511
+

@@ -1,0 +1,22 @@
+Data for plot: Average Memory Usage vs Branch
+
+          Folder  State_Save_Period branch        mean       sem
+         pcs-10k                  5 master  288.533333  7.143340
+         pcs-10k                  5 SynGVT  327.133333  6.084224
+         pcs-10k                  8 master  274.466667  8.772178
+         pcs-10k                  8 SynGVT  312.466667  5.789043
+         pcs-10k                 10 master  281.533333  6.482847
+         pcs-10k                 10 SynGVT  309.866667  5.515231
+ epidemic-10k-ba                  5 master 1063.090909 23.715532
+ epidemic-10k-ba                  5 SynGVT 1065.733333 32.871969
+ epidemic-10k-ba                  8 master 1023.666667 35.373068
+ epidemic-10k-ba                  8 SynGVT 1050.333333 39.391523
+ epidemic-10k-ba                 10 master 1044.600000 30.166964
+ epidemic-10k-ba                 10 SynGVT 1057.466667 33.484732
+epidemic-100k-ba                  5 master 1024.533333 38.102477
+epidemic-100k-ba                  5 SynGVT 1073.933333 32.977982
+epidemic-100k-ba                  8 master 1001.933333 42.479851
+epidemic-100k-ba                  8 SynGVT  994.933333 40.590342
+epidemic-100k-ba                 10 master 1093.266667 77.982994
+epidemic-100k-ba                 10 SynGVT 1011.866667 58.608700
+
